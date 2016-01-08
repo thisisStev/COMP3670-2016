@@ -40,5 +40,5 @@ Open Git Bash (Windows) or Terminal (Linux, Mac OS X) and paste in the command b
 Press `Shift-Insert` to paste in Git Bash.
 
 ----
-curl https://github.com/lawrancej/COMP1000/raw/master/main.sh | bash
+curl https://raw.githubusercontent.com/lawrancej/COMP3670-2016/master/main.sh | bash
 ----
