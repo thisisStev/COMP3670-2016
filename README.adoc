@@ -1,0 +1,44 @@
+= COMP3670
+
+== January 6
+
+=== Introduce yourself
+Welcome! Let's get to know each other with an icebreaker. Answer these questions:
+
+* What is your name?
+* Why is Computer Science your major?
+* Tell us something nobody else in the room knows about you.
+
+== January 8
+
+=== Install Git and frontends
+
+Windows:: https://git-scm.com/download/win[Install Git for Windows]
++
+https://github.com/gitextensions/gitextensions/releases/latest[Install Git Extensions]
++
+NOTE: Select KDiff, and *choose OpenSSH* (not PuTTY); otherwise,
+stick to the default settings.
++
+image:http://lawrancej.github.io/starterupper/images/what2install.png[Install KDiff]
+image:http://lawrancej.github.io/starterupper/images/openssh.png[Choose OpenSSH]
+
+Mac OS X:: http://git-scm.com/download/mac[Install git from here]
++
+http://rowanj.github.io/gitx/[Install GitX-dev]
+
+Linux:: http://git-scm.com/download/linux[Install git] using your package manager.
++
+NOTE: Don't forget to use +sudo+ with your package manager.
+
+=== Run starterupper
+
+Starterupper sets up git and project hosting for this class;
+it is safe to run even if you already have git and SSH keys set up on your machine.
+
+Open Git Bash (Windows) or Terminal (Linux, Mac OS X) and paste in the command below.
+Press `Shift-Insert` to paste in Git Bash.
+
+----
+curl https://github.com/lawrancej/COMP1000/raw/master/main.sh | bash
+----
