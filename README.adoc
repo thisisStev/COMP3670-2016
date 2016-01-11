@@ -42,3 +42,9 @@ Press `Shift-Insert` to paste in Git Bash.
 ----
 curl https://raw.githubusercontent.com/lawrancej/COMP3670-2016/master/main.sh | bash
 ----
+
+== January 11
+
+Install https://atom.io/[Atom]
+
+Let's dive into HTML.
