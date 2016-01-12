@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--
+This is an HTML comment.
+This is ignored, just like comments everywhere else
+-->
+<head> <!-- This is the start -->
+  <meta charset="utf-8">
+  <title>Hello, world!</title>
+  <style>
+  /* Only this kind of thing is a comment */
+#myHeader { color: red; font-family: Helvetica; }
+#aParagraph { color: rgb(8, 42, 142); font-family: Helvetica; }
+  </style>
+</head> <!-- this is the end -->
+<body>
+  <h1 id="myHeader">This will look big</h1>
+  <a href="http://reddit.com"><img src="https://b.thumbs.redditmedia.com/TinbroxgMRwRlaeEGfgk0HTFanXvCnHk-dAm5sLP3wg.png"></a>
+  <p id="aParagraph">This is not my first web page.</p>
+  <input type="text" id="theInput" placeholder="Type something in, dimwit!">
+<script type="text/javascript">
+// This is a JavaScript comment
+/* as is this */
+console.log("Exactly");
+var myHeader = document.getElementById("myHeader");
+var inputBox = document.getElementById("theInput");
+inputBox.oninput = function(event) {
+//  alert("Evil!");
+  myHeader.innerHTML = inputBox.value;
+};
+</script>
+</body>
+</html>
