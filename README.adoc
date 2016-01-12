@@ -47,4 +47,12 @@ curl https://raw.githubusercontent.com/lawrancej/COMP3670-2016/master/main.sh | 
 
 Install https://atom.io/[Atom]
 
-Let's dive into HTML.
+Let's dive into HTML, CSS, JavaScript.
+
+== January 12
+
+. Write a home page
+. Write down project ideas (look around at existing web applications)
+. Begin to think about who to work with
+
+
