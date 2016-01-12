@@ -55,4 +55,7 @@ Let's dive into HTML, CSS, JavaScript.
 . Write down project ideas (look around at existing web applications)
 . Begin to think about who to work with
 
-
+----
+git checkout -b gh-pages
+git push origin gh-pages
+----
