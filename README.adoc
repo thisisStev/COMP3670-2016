@@ -9,7 +9,8 @@
 
 == JavaScript
 
-* https://github.com/sorrycc/awesome-javascript[Awesome JavaScript libraries]
+* https://github.com/sorrycc/awesome-javascript[Awesome JavaScript libraries (mostly client side)]
+* https://github.com/sindresorhus/awesome-nodejs[Awesome Node.js libraries (server side)]
 
 == CSS
 
