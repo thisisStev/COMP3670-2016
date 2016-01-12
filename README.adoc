@@ -2,6 +2,10 @@
 
 = Reading list
 
+== HTML5
+
+* https://github.com/diegocard/awesome-html5[Awesome HTML5]
+
 == JavaScript
 
 * https://github.com/sorrycc/awesome-javascript[Awesome JavaScript libraries]
