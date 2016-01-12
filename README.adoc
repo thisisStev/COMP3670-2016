@@ -1,5 +1,15 @@
 = COMP3670
 
+= Reading list
+
+== JavaScript
+
+* https://github.com/sorrycc/awesome-javascript[Awesome JavaScript libraries]
+
+== CSS
+
+* https://github.com/sotayamashita/awesome-css[Awesome CSS stuff]
+
 == January 6
 
 === Introduce yourself
@@ -59,3 +69,5 @@ Let's dive into HTML, CSS, JavaScript.
 git checkout -b gh-pages
 git push origin gh-pages
 ----
+
+Go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
