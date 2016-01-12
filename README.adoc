@@ -5,6 +5,7 @@
 == HTML5
 
 * https://github.com/diegocard/awesome-html5[Awesome HTML5]
+* http://getbootstrap.com/getting-started/#download[Bootstrap]
 
 == JavaScript
 
@@ -13,10 +14,16 @@
 == CSS
 
 * https://github.com/sotayamashita/awesome-css[Awesome CSS stuff]
+* https://fortawesome.github.io/Font-Awesome/icons/[Font awesome icons]
 
 == Random
 
 * http://www.wonder-tonic.com/geocitiesizer/[Geocities-izer]
+
+== Package up the web app
+
+* https://cordova.apache.org/[Cordova (package up a web app as a phone app)]
+* http://electron.atom.io/[Electron (package up a web app as a desktop app)]
 
 == January 6
 
