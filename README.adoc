@@ -100,3 +100,5 @@ cd Code
 node node-example.js
 ----
 
+Go to: http://127.0.0.1:1337/ and it should say `Hello World`
+
