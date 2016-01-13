@@ -92,6 +92,7 @@ Go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
 
 * https://nodejs.org/en/download/stable/[Install Node.js] Stable (not LTS) for your platform.
 * Also, https://www.docker.com/docker-toolbox[Instal Docker toolbox] for your platform.
+* https://fortawesome.github.io/Font-Awesome/get-started/[Font awesome]
 
 ----
 cd ~/COMP3670-2016
