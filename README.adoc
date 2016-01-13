@@ -2,10 +2,15 @@
 
 = Reading list
 
+* http://www.w3schools.com/[w3schools]
+
 == HTML5
 
+* http://diveintohtml5.info/[Dive into HTML5]
+* https://html.spec.whatwg.org/multipage/[HTML5 specification]
 * https://github.com/diegocard/awesome-html5[Awesome HTML5]
 * http://getbootstrap.com/getting-started/#download[Bootstrap]
+* https://validator.w3.org/[Validator]
 
 == JavaScript
 
@@ -17,9 +22,15 @@
 * https://github.com/sotayamashita/awesome-css[Awesome CSS stuff]
 * https://fortawesome.github.io/Font-Awesome/icons/[Font awesome icons]
 
+== SVG
+
+* http://d3js.org/[D3]
+
 == Random
 
 * http://www.wonder-tonic.com/geocitiesizer/[Geocities-izer]
+* http://needsmorejpeg.com/[Don't use JPEG inappropriately]
+* https://pixlcore.com/read/WebcamJS[Webcam.js]
 
 == Package up the web app
 
