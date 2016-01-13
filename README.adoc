@@ -90,5 +90,6 @@ Go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
 
 == January 13
 
-https://nodejs.org/en/download/stable/[Install Node.js] Stable (not LTS) for your platform.
+* https://nodejs.org/en/download/stable/[Install Node.js] Stable (not LTS) for your platform.
+* Also, https://www.docker.com/docker-toolbox[Instal Docker toolbox] for your platform.
 
