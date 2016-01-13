@@ -87,3 +87,8 @@ git push origin gh-pages
 ----
 
 Go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
+
+== January 13
+
+https://nodejs.org/en/download/stable/[Install Node.js] Stable (not LTS) for your platform.
+
