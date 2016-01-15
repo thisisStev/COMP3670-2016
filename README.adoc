@@ -61,6 +61,7 @@
 * http://www.wonder-tonic.com/geocitiesizer/[Geocities-izer]
 * http://needsmorejpeg.com/[Don't use JPEG inappropriately]
 * http://media.tojicode.com/q3bsp/[Quake in WebGL]
+* http://www.stilldrinking.org/programming-sucks[Programming sucks]
 
 == Some backend frameworks
 
@@ -192,7 +193,9 @@ Go to: http://127.0.0.1:1337/ and it should say `Hello World`
 
 == January 15
 
-In Atom, go to Preferences... -> Install
+
+
+In Atom, go to Preferences... -> Install or File -> Settings.. -> Install
 
 Install these packages:
 
@@ -232,3 +235,5 @@ echo "node_modules" >> .gitignore
 npm install express --save
 npm install express-handlebars --save
 ----
+
+Go here and copy paste: http://expressjs.com/en/starter/hello-world.html[Hello world in express].
