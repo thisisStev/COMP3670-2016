@@ -1,6 +1,6 @@
 = COMP3670
 
-= Reading list
+== Tutorials
 
 * http://www.w3schools.com/[w3schools]
 
@@ -10,32 +10,87 @@
 * https://html.spec.whatwg.org/multipage/[HTML5 specification]
 * https://github.com/diegocard/awesome-html5[Awesome HTML5]
 * http://getbootstrap.com/getting-started/#download[Bootstrap]
+* https://github.com/ironsummitmedia/startbootstrap/[Bootstrap themes]
+* http://semantic-ui.com/[Semantic-UI]
 * https://validator.w3.org/[Validator]
 
 == JavaScript
 
-* https://github.com/sorrycc/awesome-javascript[Awesome JavaScript libraries (mostly client side)]
-* https://github.com/sindresorhus/awesome-nodejs[Awesome Node.js libraries (server side)]
+[cols="3"]
+|===
+|Awesome libraries
+|https://github.com/sorrycc/awesome-javascript[Client-side]
+|https://github.com/sindresorhus/awesome-nodejs[Server-side]
+
+|Multimedia
+|https://pixlcore.com/read/WebcamJS[Webcam.js]
+|http://mediaelementjs.com/[Play video and audio]
+
+|Presentations
+|http://impress.github.io/impress.js/#/bored[Impress.js]
+|https://github.com/hakimel/reveal.js[Reveal.js]
+
+|Drawing
+|http://d3js.org/[D3]
+|http://threejs.org/[Three.js]
+
+|Packaging
+|https://cordova.apache.org/[Cordova (phone)]
+|http://electron.atom.io/[Electron (desktop)]
+
+|https://html5test.com/[Feature detection]
+|https://modernizr.com/docs[Modernizr]
+|http://caniuse.com/[Browser support]
+
+|Polyfills/fallbacks
+|https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills[Polyfills/fallbacks]
+|http://html5please.com/[Guide]
+
+|===
 
 == CSS
 
 * https://github.com/sotayamashita/awesome-css[Awesome CSS stuff]
 * https://fortawesome.github.io/Font-Awesome/icons/[Font awesome icons]
-
-== SVG
-
-* http://d3js.org/[D3]
+* http://daneden.github.io/animate.css/[Animate.css]
+* http://necolas.github.io/normalize.css/[Normalize.css]
+* http://lesscss.org/features/[Less]
 
 == Random
 
 * http://www.wonder-tonic.com/geocitiesizer/[Geocities-izer]
 * http://needsmorejpeg.com/[Don't use JPEG inappropriately]
-* https://pixlcore.com/read/WebcamJS[Webcam.js]
+* http://media.tojicode.com/q3bsp/[Quake in WebGL]
 
-== Package up the web app
+== Some backend frameworks
 
-* https://cordova.apache.org/[Cordova (package up a web app as a phone app)]
-* http://electron.atom.io/[Electron (package up a web app as a desktop app)]
+[cols="3"]
+|===
+|*JavaScript*
+|https://nodejs.org/en/[Node.js]
+|http://expressjs.com/[Express.js]
+
+|*C#*
+|http://www.asp.net/[ASP.NET]
+|
+
+|*Java*
+|https://www.playframework.com/[Play]
+|http://sparkjava.com/[Spark]
+
+|*Python*
+|https://www.djangoproject.com/[Django]
+|http://flask.pocoo.org/[Flask]
+
+|*Ruby*
+|http://rubyonrails.org/[Ruby Rails]
+|http://www.sinatrarb.com/[Sinatra]
+
+|*PHP*
+|https://laravel.com/[Laravel]
+|http://cakephp.org/[Cake]
+
+|===
 
 == January 6
 
@@ -43,42 +98,63 @@
 Welcome! Let's get to know each other with an icebreaker. Answer these questions:
 
 * What is your name?
-* Why is Computer Science your major?
+* What is your major and why did you pick it?
 * Tell us something nobody else in the room knows about you.
 
 == January 8
 
-=== Install Git and frontends
+=== Install Git
+Download and install git for your platform.
 
-Windows:: https://git-scm.com/download/win[Install Git for Windows]
-+
-https://github.com/gitextensions/gitextensions/releases/latest[Install Git Extensions]
-+
-NOTE: Select KDiff, and *choose OpenSSH* (not PuTTY); otherwise,
-stick to the default settings.
-+
-image:http://lawrancej.github.io/starterupper/images/what2install.png[Install KDiff]
-image:http://lawrancej.github.io/starterupper/images/openssh.png[Choose OpenSSH]
+[cols="1a,2a"]
+|===
+|*Download*
+|*Installation Notes*
 
-Mac OS X:: http://git-scm.com/download/mac[Install git from here]
-+
-http://rowanj.github.io/gitx/[Install GitX-dev]
+|https://git-scm.com/download/win[Git for Windows]
+|Stick with the default options and click `Next` until finished.
 
-Linux:: http://git-scm.com/download/linux[Install git] using your package manager.
-+
-NOTE: Don't forget to use +sudo+ with your package manager.
+|http://git-scm.com/download/mac[Git for Mac OS X]
+|Got an error? Try:
+
+* Apple menu -> System Preferences... -> Security & Privacy -> Open Anyway.
+* Otherwise, try: Applications -> Utilities -> Terminal and type `git` and follow instructions to install git.
+
+|http://git-scm.com/download/linux[Git for Linux]
+|Use `sudo` with your package manager.
+
+|===
 
 === Run starterupper
 
-Starterupper sets up git and project hosting for this class;
-it is safe to run even if you already have git and SSH keys set up on your machine.
+Starterupper configures git for this class.
+It is safe to run if you already use git.
 
-Open Git Bash (Windows) or Terminal (Linux, Mac OS X) and paste in the command below.
-Press `Shift-Insert` to paste in Git Bash.
+Copy/paste the entire command below...
 
 ----
 curl https://raw.githubusercontent.com/lawrancej/COMP3670-2016/master/main.sh | bash
 ----
+
+...into your terminal:
+
+[cols="1a,1a,1a,1a"]
+|===
+|*Plaform*
+|*Terminal*
+|*Copy shortcut*
+|*Paste shortcut*
+
+|*Windows*
+|Windows key -> Git Bash
+|`Ctrl-C`
+|`Shift-Insert`
+
+|*Mac*
+|Applications -> Utilities -> Terminal
+|`Command-C`
+|`Command-V`
+|===
 
 == January 11
 
@@ -114,3 +190,45 @@ node node-example.js
 
 Go to: http://127.0.0.1:1337/ and it should say `Hello World`
 
+== January 15
+
+In Atom, go to Preferences... -> Install
+
+Install these packages:
+
+* `linter-eslint`
+* `linter-csslint`
+* `linter-htmlhint`
+* `atom-html-preview`
+* `color-picker`
+* `merge-conflicts`
+
+`npm` is node.js' package manager (hence the name).
+You can create packages (i.e., your web app) using `npm init`.
+
+Some packages are meant for global installation, like http://browserify.org/[`browserify`] and https://mochajs.org/[`mocha`].
+
+----
+npm install -g browserify
+npm install -g mocha
+----
+
+[NOTE]
+====
+Did you see any errors? If so, do this and try the command above again:
+----
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+----
+====
+
+Other packages only make sense as a dependency for your own package, like `express` (web framework).
+
+----
+cd ~/COMP3670-2016
+mkdir -p Code/example-app
+cd Code/example-app
+npm init
+echo "node_modules" >> .gitignore
+npm install express --save
+npm install express-handlebars --save
+----
