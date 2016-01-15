@@ -234,6 +234,7 @@ npm init
 echo "node_modules" >> .gitignore
 npm install express --save
 npm install express-handlebars --save
+touch index.js
 ----
 
-Go here and copy paste: http://expressjs.com/en/starter/hello-world.html[Hello world in express].
+Go here and copy paste: http://expressjs.com/en/starter/hello-world.html[Hello world in express] into `index.js`.
