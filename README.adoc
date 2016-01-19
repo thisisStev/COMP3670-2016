@@ -200,6 +200,7 @@ In Atom, go to Preferences... -> Install or File -> Settings.. -> Install
 Install these packages:
 
 * `linter-eslint`
+* `jshint`
 * `linter-csslint`
 * `linter-htmlhint`
 * `atom-html-preview`
@@ -268,3 +269,7 @@ node index.js
 ----
 
 Then, go to http://localhost:3000/static[this page], served statically.
+
+== January 19
+
+http://getbootstrap.com/getting-started/[Bootstrap]
