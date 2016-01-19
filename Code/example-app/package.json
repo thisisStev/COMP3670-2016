@@ -1,0 +1,27 @@
+{
+  "name": "example-app",
+  "version": "1.0.0",
+  "description": "Our first node thingy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawrancej/COMP3670-2016.git"
+  },
+  "keywords": [
+    "express",
+    "example"
+  ],
+  "author": "Joey Lawrance",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lawrancej/COMP3670-2016/issues"
+  },
+  "homepage": "https://github.com/lawrancej/COMP3670-2016#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1"
+  }
+}
