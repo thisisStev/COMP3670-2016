@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- HTML entities: the html equivalent of escape codes
+    \n \t \r \b
+    < &lt;
+    > &gt;
+    -->
+    <title>{{title}}</title>
+</head>
+<body>
+
+    {{{body}}}
+
+<ol>
+{{#each list}}
+<li>{{title}}: {{body}}</li>
+{{/each}}
+</ol>
+
+You are visitor {{views}} to this page. Go you!
+</body>
+</html>
