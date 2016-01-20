@@ -295,3 +295,25 @@ Other topics:
 * http://www.w3schools.com/html/html_entities.asp[HTML entities]
 * Double vs. triple stash (double escapes html, triple does not)
 * http://json.org/example.html[JSON]
+
+If you want to see my express code, do this:
+
+----
+cd ~/COMP3670-2016
+git fetch --all
+# merge latest from master
+git merge upstream/master
+# look at my code
+git checkout upstream/express-example
+git checkout -b express-example
+# go back to the master branch
+git checkout master
+----
+
+== January 20
+
+Input from forms into the backend.
+
+* HTML forms
+* HTTP methods, requests, responses
+* URL encodings
