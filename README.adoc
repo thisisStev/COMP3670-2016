@@ -286,3 +286,12 @@ Copy paste this http://getbootstrap.com/getting-started/[Bootstrap] stuff into y
 ----
 
 Also, see: http://semantic-ui.com/[Semantic UI]
+
+Let's add http://handlebarsjs.com/[handlebars] to express, as done here: https://github.com/ericf/express-handlebars[Express-handlebars]
+Or a https://www.youtube.com/watch?v=m5ribwPpIPw[youtube video illustrating something similar]
+
+Other topics:
+
+* http://www.w3schools.com/html/html_entities.asp[HTML entities]
+* Double vs. triple stash (double escapes html, triple does not)
+* http://json.org/example.html[JSON]
