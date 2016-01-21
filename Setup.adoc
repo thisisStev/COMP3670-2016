@@ -1,0 +1,62 @@
+= Software setup
+
+[cols="1a,3a"]
+|===
+|*Download*
+|*Installation notes*
+
+|http://git-scm.com/download/[Git] (version control)
+|*Windows:* Stick with the default options and click `Next` until finished.
+
+*Mac OS X:* Got an error? Try:
+
+* Apple menu -> System Preferences... -> Security & Privacy -> Open Anyway.
+* Otherwise, try: Applications -> Utilities -> Terminal and type `git` and follow instructions to install git.
+
+*Linux:* Use `sudo` with your package manager.
+
+|https://atom.io/[Atom] (text editor)
+|In Atom, open the Settings.
+
+****
+*Windows:* File -> Settings... -> Install
+
+*Mac OS X :* Atom -> Preferences... -> Install
+****
+
+Install these Atom packages:
+
+* `linter-eslint`
+* `jshint`
+* `linter-csslint`
+* `linter-htmlhint`
+* `atom-html-preview`
+* `asciidoc-preview`
+* `color-picker`
+* `merge-conflicts`
+
+|https://nodejs.org/en/download/stable/[Node.js] (server-side JavaScript)
+|Once installed, open the command line (Git Bash or Terminal)
+
+****
+*Windows*: Windows key -> Git Bash
+
+*Mac OS X*: Finder -> Applications -> Utilities -> Terminal
+****
+
+Then, use `npm` to install `browserify` and `mocha` from the command line
+
+----
+npm install -g browserify
+npm install -g mocha
+----
+
+Did you see any errors? If so, do this and try the commands above again:
+
+----
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+----
+
+|https://www.docker.com/docker-toolbox[Docker toolbox] (Containers)
+|We'll get to this later.
+|===

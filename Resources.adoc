@@ -1,0 +1,96 @@
+= Resources
+
+== Front-end
+
+[cols="1a,3a"]
+|===
+|HTML5
+|* http://www.w3schools.com/[w3schools]
+* http://diveintohtml5.info/[Dive into HTML5]
+* https://html.spec.whatwg.org/multipage/[HTML5 specification]
+* https://github.com/diegocard/awesome-html5[Awesome HTML5]
+* https://validator.w3.org/[Validator]
+
+|CSS
+|* https://github.com/sotayamashita/awesome-css[Awesome CSS stuff]
+* https://fortawesome.github.io/Font-Awesome/icons/[Font awesome icons]
+* http://daneden.github.io/animate.css/[Animate.css]
+* http://necolas.github.io/normalize.css/[Normalize.css]
+* http://lesscss.org/features/[Less]
+
+|Frontend templates
+|* http://getbootstrap.com/getting-started/#download[Bootstrap]
+* https://github.com/ironsummitmedia/startbootstrap/[Bootstrap themes]
+* http://semantic-ui.com/[Semantic-UI]
+
+|Silly
+|* http://www.wonder-tonic.com/geocitiesizer/[Geocities-izer]
+* http://needsmorejpeg.com/[Don't use JPEG inappropriately]
+* http://media.tojicode.com/q3bsp/[Quake in WebGL]
+* http://www.stilldrinking.org/programming-sucks[Programming sucks]
+
+|===
+
+== JavaScript
+
+[cols="3"]
+|===
+|Awesome libraries
+|https://github.com/sorrycc/awesome-javascript[Client-side]
+|https://github.com/sindresorhus/awesome-nodejs[Server-side]
+
+|Multimedia
+|https://pixlcore.com/read/WebcamJS[Webcam.js]
+|http://mediaelementjs.com/[Play video and audio]
+
+|Presentations
+|http://impress.github.io/impress.js/#/bored[Impress.js]
+|https://github.com/hakimel/reveal.js[Reveal.js]
+
+|Drawing
+|http://d3js.org/[D3]
+|http://threejs.org/[Three.js]
+
+|Packaging
+|https://cordova.apache.org/[Cordova (phone)]
+|http://electron.atom.io/[Electron (desktop)]
+
+|https://html5test.com/[Feature detection]
+|https://modernizr.com/docs[Modernizr]
+|http://caniuse.com/[Browser support]
+
+|Polyfills/fallbacks
+|https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills[Polyfills/fallbacks]
+|http://html5please.com/[Guide]
+
+|===
+
+== Backend frameworks
+
+[cols="3"]
+|===
+|*JavaScript*
+|https://nodejs.org/en/[Node.js]
+|http://expressjs.com/[Express.js]
+
+|*C#*
+|http://www.asp.net/[ASP.NET]
+|
+
+|*Java*
+|https://www.playframework.com/[Play]
+|http://sparkjava.com/[Spark]
+
+|*Python*
+|https://www.djangoproject.com/[Django]
+|http://flask.pocoo.org/[Flask]
+
+|*Ruby*
+|http://rubyonrails.org/[Ruby Rails]
+|http://www.sinatrarb.com/[Sinatra]
+
+|*PHP*
+|https://laravel.com/[Laravel]
+|http://cakephp.org/[Cake]
+
+|===
