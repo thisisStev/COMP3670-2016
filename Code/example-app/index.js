@@ -1,6 +1,6 @@
 // this is essentially an import
 var express = require('express');
-// import express handlebars
+// import express handlebars this does templating
 var exphbs  = require('express-handlebars');
 // this lazily loads the module
 var app = express();
@@ -18,6 +18,8 @@ var viewCounter = 1000;
 // Respond to a request
 app.get('/', function (req, res) {
   res.render('home', {
+    "firstname": req.query.first,
+    "lastname": req.query.last,
     "title": "Something",
     "views": viewCounter,
     "list": [

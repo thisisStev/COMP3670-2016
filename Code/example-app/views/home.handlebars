@@ -1,3 +1,20 @@
 <h1>Example App: Home</h1>
 
-Hello, everybody!
+Hello, {{#if firstname}}
+{{firstname}} {{lastname}}!
+{{else}}
+you!
+{{/if}}
+
+<!--
+-->
+<form action="/" method="get">
+<input type="text"
+name="first"
+placeholder="First name" value="{{firstname}}"><br>
+<input type="text"
+name="last"
+placeholder="Last name" value="{{lastname}}"><br>
+<input type="submit"
+value="Submit your name">
+</form>
