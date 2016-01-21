@@ -1,5 +1,60 @@
 = COMP3670
 
+== Download & install
+
+[cols="1a,3a"]
+|===
+|*Download*
+|*Installation notes*
+
+|http://git-scm.com/download/[Git] (version control)
+|*Windows:* Stick with the default options and click `Next` until finished.
+
+*Mac OS X:* Got an error? Try:
+
+* Apple menu -> System Preferences... -> Security & Privacy -> Open Anyway.
+* Otherwise, try: Applications -> Utilities -> Terminal and type `git` and follow instructions to install git.
+
+*Linux:* Use `sudo` with your package manager.
+
+|https://atom.io/[Atom] (text editor)
+|In Atom, go to the Settings to install packages.
+
+****
+*Windows:* Go to: File -> Settings... -> Install
+
+*Mac OS X :* Go to: Preferences... -> Install
+****
+
+Install these Atom packages:
+
+* `linter-eslint`
+* `jshint`
+* `linter-csslint`
+* `linter-htmlhint`
+* `atom-html-preview`
+* `color-picker`
+* `merge-conflicts`
+
+|https://nodejs.org/en/download/stable/[Node.js] (server-side JavaScript)
+|Once installed, use `npm` to install `browserify` and `mocha` from the Terminal
+or Git Bash:
+
+----
+npm install -g browserify
+npm install -g mocha
+----
+
+Did you see any errors? If so, do this and try the command above again:
+
+----
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+----
+
+|https://www.docker.com/docker-toolbox[Docker toolbox] (Containers)
+|We'll get to this later.
+|===
+
 == Tutorials
 
 * http://www.w3schools.com/[w3schools]
@@ -104,30 +159,6 @@ Welcome! Let's get to know each other with an icebreaker. Answer these questions
 
 == January 8
 
-=== Install Git
-Download and install git for your platform.
-
-[cols="1a,2a"]
-|===
-|*Download*
-|*Installation Notes*
-
-|https://git-scm.com/download/win[Git for Windows]
-|Stick with the default options and click `Next` until finished.
-
-|http://git-scm.com/download/mac[Git for Mac OS X]
-|Got an error? Try:
-
-* Apple menu -> System Preferences... -> Security & Privacy -> Open Anyway.
-* Otherwise, try: Applications -> Utilities -> Terminal and type `git` and follow instructions to install git.
-
-|http://git-scm.com/download/linux[Git for Linux]
-|Use `sudo` with your package manager.
-
-|===
-
-=== Run starterupper
-
 Starterupper configures git for this class.
 It is safe to run if you already use git.
 
@@ -159,8 +190,6 @@ curl https://raw.githubusercontent.com/lawrancej/COMP3670-2016/master/main.sh | 
 
 == January 11
 
-Install https://atom.io/[Atom]
-
 Let's dive into HTML, CSS, JavaScript.
 
 == January 12
@@ -178,8 +207,6 @@ Go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
 
 == January 13
 
-* https://nodejs.org/en/download/stable/[Install Node.js] Stable (not LTS) for your platform.
-* Also, https://www.docker.com/docker-toolbox[Instal Docker toolbox] for your platform.
 * https://fortawesome.github.io/Font-Awesome/get-started/[Font awesome]
 
 ----
@@ -194,36 +221,10 @@ Go to: http://127.0.0.1:1337/ and it should say `Hello World`
 == January 15
 
 
-
-In Atom, go to Preferences... -> Install or File -> Settings.. -> Install
-
-Install these packages:
-
-* `linter-eslint`
-* `jshint`
-* `linter-csslint`
-* `linter-htmlhint`
-* `atom-html-preview`
-* `color-picker`
-* `merge-conflicts`
-
 `npm` is node.js' package manager (hence the name).
 You can create packages (i.e., your web app) using `npm init`.
 
-Some packages are meant for global installation, like http://browserify.org/[`browserify`] and https://mochajs.org/[`mocha`].
-
-----
-npm install -g browserify
-npm install -g mocha
-----
-
-[NOTE]
-====
-Did you see any errors? If so, do this and try the command above again:
-----
-sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
-----
-====
+Some packages are meant for global installation, like http://browserify.org/[`browserify`] and https://mochajs.org/[`mocha`], installed earlier.
 
 Other packages only make sense as a dependency for your own package, like `express` (web framework).
 
@@ -314,6 +315,57 @@ git checkout master
 
 Input from forms into the backend.
 
+URL: Uniform Resource Locator (paths for the web)
+
+Absolute URLs:
+
+----
+scheme://domain/path/to/something/r/rather?queryKey=value&anotherKey=anotherValue
+scheme://domain/path/to/something#fragment
+----
+
+Relative URLs:
+Suppose we are at `http://localhost:3000/some/place.html`
+
+----
+/another-place
+# the absolute URL is http://localhost:3000/another-place
+another-place
+# the absolute URL is http://localhost:3000/some/another-place
+../some-place-secret
+# the absolute URL is http://localhost:3000/some-place-secret
+----
+
+action is where we send form data to (that's a URL)
+method is how we send data to our "action"
+URL
+
 * HTML forms
 * HTTP methods, requests, responses
 * URL encodings
+
+== TODO (not now, just notes to self)
+
+----
+docker-machine ssh default
+----
+
+So, you can mount files or directories on OS X using.
+
+----
+docker run -v /Users/<path>:/<container path> ...
+----
+
+For example:
+
+----
+docker run -v /Users/lawrancej/COMP3670-2016:/webdev -i -t centos /bin/bash
+----
+
+On Windows, mount directories using:
+
+----
+docker run -v /c/Users/<path>:/<container path> ...`
+----
+
+All other paths come from your virtual machine’s filesystem.
