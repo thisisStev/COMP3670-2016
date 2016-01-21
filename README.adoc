@@ -23,7 +23,7 @@
 ****
 *Windows:* Go to: File -> Settings... -> Install
 
-*Mac OS X :* Go to: Preferences... -> Install
+*Mac OS X :* Go to: Atom -> Preferences... -> Install
 ****
 
 Install these Atom packages:
@@ -33,6 +33,7 @@ Install these Atom packages:
 * `linter-csslint`
 * `linter-htmlhint`
 * `atom-html-preview`
+* `asciidoc-preview`
 * `color-picker`
 * `merge-conflicts`
 
