@@ -55,17 +55,24 @@ Let's dive into HTML, CSS, JavaScript.
 . Write down project ideas (look around at existing web applications)
 . Begin to think about who to work with
 
+Github can serve files in your repo under the `gh-pages` branch.
+
 ----
+# create the gh-pages branch
 git checkout -b gh-pages
+# push the gh-pages branch to github
 git push origin gh-pages
 ----
 
-Go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
+Once there, any html in that branch will be accessible via your-user-name.github.io.
+
+For example, go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
 
 == January 13
 
-* https://fortawesome.github.io/Font-Awesome/get-started/[Font awesome]
+https://fortawesome.github.io/Font-Awesome/get-started/[Font awesome] is a collection of useful icons.
 
+To test that node is working correctly, do the following in the command line:
 ----
 cd ~/COMP3670-2016
 git pull upstream master
@@ -77,13 +84,14 @@ Go to: http://127.0.0.1:1337/ and it should say `Hello World`
 
 == January 15
 
-
 `npm` is node.js' package manager (hence the name).
 You can create packages (i.e., your web app) using `npm init`.
 
 Some packages are meant for global installation, like http://browserify.org/[`browserify`] and https://mochajs.org/[`mocha`], installed earlier.
 
-Other packages only make sense as a dependency for your own package, like `express` (web framework).
+Other packages only make sense as a dependency for your own package, like `express`, a web framework for node.js.
+
+Type these commands, but don't copy/paste, because `npm init` is interactive.
 
 ----
 cd ~/COMP3670-2016
@@ -98,11 +106,13 @@ touch index.js
 
 Go here and copy paste: http://expressjs.com/en/starter/hello-world.html[Hello world in express] into `index.js`.
 
+Then, in the command line, run it.
+
 ----
 node index.js
 ----
 
-Go to http://localhost:3000/[this page].
+To see that it works, go to http://localhost:3000/
 
 Now, let's serve static files.
 
@@ -120,17 +130,23 @@ Add this line to `index.js` (after `var app = express();`) and save:
 app.use('/static', express.static('public'));
 ----
 
-Next, run this command
+Next, stop `node` with `Ctrl-C` and re-run it:
 
 ----
 node index.js
 ----
 
-Then, go to http://localhost:3000/static[this page], served statically.
+Then, go to http://localhost:3000/static
+
+That page is served statically.
 
 == January 19
 
-Copy paste this http://getbootstrap.com/getting-started/[Bootstrap] stuff into your html's `head`
+http://getbootstrap.com/getting-started/[Bootstrap] is a popular front-end framework.
+It has a grid system (for layouts that respond to screen size),
+as well as nice default styles for things like navigation bars and alerts.
+
+Copy this HTML into your html's `head`
 
 ----
 <!-- Latest compiled and minified CSS -->
@@ -143,16 +159,14 @@ Copy paste this http://getbootstrap.com/getting-started/[Bootstrap] stuff into y
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 ----
 
-Also, see: http://semantic-ui.com/[Semantic UI]
+http://semantic-ui.com/[Semantic UI] is similar to bootstrap, but has additional styling.
 
-Let's add http://handlebarsjs.com/[handlebars] to express, as done here: https://github.com/ericf/express-handlebars[Express-handlebars]
-Or a https://www.youtube.com/watch?v=m5ribwPpIPw[youtube video illustrating something similar]
+http://handlebarsjs.com/[Handlebars] is a template system, enabling separation of html (view) from code (model).
+Handlebars replaces placeholders in a file with data from a http://json.org/example.html[JavaScript object (JSON)]
+Placeholders come in two varieties; double-stash `{{placeholder}}` or triple-stash `{{{placeholder}}}`
+Handlebars escapes HTML into http://www.w3schools.com/html/html_entities.asp[HTML entities] for double-stash placeholders, but not for triple-stash placeholders.
 
-Other topics:
-
-* http://www.w3schools.com/html/html_entities.asp[HTML entities]
-* Double vs. triple stash (double escapes html, triple does not)
-* http://json.org/example.html[JSON]
+Let's https://github.com/ericf/express-handlebars[add handlebars to express], as https://www.youtube.com/watch?v=m5ribwPpIPw[demonstrated on youtube]
 
 If you want to see my express code, do this:
 
@@ -163,7 +177,10 @@ git fetch --all
 git merge upstream/master
 # look at my code
 git checkout upstream/express-example
+# create a local branch that tracks upstream
 git checkout -b express-example
+# Get updates to express-example
+git pull upstream express-example
 # go back to the master branch
 git checkout master
 ----
@@ -177,7 +194,7 @@ URL: Uniform Resource Locator (paths for the web)
 Absolute URLs:
 
 ----
-scheme://domain/path/to/something/r/rather?queryKey=value&anotherKey=anotherValue
+scheme://domain/path/to/something?key=value&anotherKey=anotherValue
 scheme://domain/path/to/something#fragment
 ----
 
