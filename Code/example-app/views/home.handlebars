@@ -18,3 +18,18 @@ placeholder="Last name" value="{{lastname}}"><br>
 <input type="submit"
 value="Submit your name">
 </form>
+
+<form method="post" action="/form_handler">
+  <input type="text"
+  name="title"
+  placeholder="Enter a title">
+  <br>
+  <label for="paragraph">Enter a paragraph</label>
+  <br>
+  <textarea name="paragraph" id="paragraph" cols="80" rows="10">
+    Enter something
+  </textarea>
+  <br>
+  <input type="submit"
+  value="Post something">
+</form>

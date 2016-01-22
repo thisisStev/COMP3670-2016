@@ -11,6 +11,13 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 // this speaks for itself, right?
 app.set('view engine', 'handlebars');
 
+var bodyParser = require('body-parser');
+var multer = require('multer'); // v1.0.5
+var upload = multer(); // for parsing multipart/form-data
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 // serve up any request to /static using files from public
 app.use('/static', express.static('public'));
 
@@ -26,6 +33,11 @@ app.get('/', function (req, res) {
       {"title": "something", "body": "moar stuff"},
       {"title": "another thing", "body": "even more!"}
     ]
+  });
+  app.post("/form_handler",function(request, response) {
+    console.log(request.body);
+    response.json(request.body);
+//    response.send('Hello');
   });
   viewCounter++;
 //  res.send('Hello World!');

@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/lawrancej/COMP3670-2016#readme",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.3",
-    "express-handlebars": "^2.0.1"
+    "express-handlebars": "^2.0.1",
+    "multer": "^1.1.0"
   }
 }

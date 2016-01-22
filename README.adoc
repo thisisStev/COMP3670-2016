@@ -254,6 +254,16 @@ URL
 * HTTP methods, requests, responses
 * URL encodings
 
+== January 22
+
+HEAD: Get headers
+GET: Access resources
+POST: Modify something on the server
+OPTIONS: HTTP proxy or CORS requests
+PUT: Add a resource on the server
+DELETE: Remove a resource on the server
+
+
 == TODO (not now, just notes to self)
 
 ----
