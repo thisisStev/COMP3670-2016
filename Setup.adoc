@@ -58,5 +58,5 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 ----
 
 |https://www.docker.com/docker-toolbox[Docker toolbox] (Containers)
-|We'll get to this later.
+|We'll get to this later. https://www.docker.com/what-docker[Learn more about Docker]
 |===
