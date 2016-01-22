@@ -33,35 +33,36 @@
 
 == JavaScript
 
-[cols="3"]
+[cols="1a,3a"]
 |===
+|Tutorials
+|* https://www.codecademy.com/learn/javascript[Codecademy]
+* https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics[JavaScript basics]
+* http://www.w3schools.com/js/[w3schools JavaScript tutorial]
+* https://github.com/loverajoel/jstips[JavaScript tips]
+
 |Awesome libraries
-|https://github.com/sorrycc/awesome-javascript[Client-side]
-|https://github.com/sindresorhus/awesome-nodejs[Server-side]
-
-|Multimedia
-|https://pixlcore.com/read/WebcamJS[Webcam.js]
-|http://mediaelementjs.com/[Play video and audio]
-
-|Presentations
-|http://impress.github.io/impress.js/#/bored[Impress.js]
-|https://github.com/hakimel/reveal.js[Reveal.js]
-
-|Drawing
-|http://d3js.org/[D3]
-|http://threejs.org/[Three.js]
+|* https://github.com/sorrycc/awesome-javascript[Client-side library list]
+* https://github.com/sindresorhus/awesome-nodejs[Server-side library list]
+* https://pixlcore.com/read/WebcamJS[Webcam.js]
+* http://mediaelementjs.com/[Play video and audio]
+* http://impress.github.io/impress.js/#/bored[Impress.js]
+* https://github.com/hakimel/reveal.js[Reveal.js]
+* http://d3js.org/[D3]
+* http://threejs.org/[Three.js]
 
 |Packaging
-|https://cordova.apache.org/[Cordova (phone)]
-|http://electron.atom.io/[Electron (desktop)]
+|* https://cordova.apache.org/[Cordova (phone)]
+* http://phonegap.com/[Phonegap (phone)]
+* http://electron.atom.io/[Electron (desktop)]
+* http://nwjs.io/[NW.js (desktop)]
 
-|https://html5test.com/[Feature detection]
-|https://modernizr.com/docs[Modernizr]
-|http://caniuse.com/[Browser support]
-
-|Polyfills/fallbacks
-|https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills[Polyfills/fallbacks]
-|http://html5please.com/[Guide]
+|Feature detection / fallbacks
+|* https://html5test.com/[HTML5 test]
+* https://modernizr.com/docs[Modernizr]
+* http://caniuse.com/[Browser support]
+* https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills[Polyfills/fallbacks]
+* http://html5please.com/[Guide]
 
 |===
 

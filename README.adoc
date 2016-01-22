@@ -49,6 +49,42 @@ curl https://raw.githubusercontent.com/lawrancej/COMP3670-2016/master/main.sh | 
 
 Let's dive into HTML, CSS, JavaScript.
 
+----
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hello world</title>
+<!-- This is a comment -->
+</head>
+<body>
+Hello, world!
+</body>
+</html>
+----
+
+Also, a friendly reminder about image file formats:
+
+[cols="1a,1a,1a"]
+|===
+|*For...*
+|*... use...*
+|*... because it...*
+
+|Photographs
+|*JPEG* (lossy raster format)
+|saves bandwidth
+
+|Screenshots
+|*PNG* (lossless raster format)
+|preserves image quality
+
+|Drawings
+|*SVG* (vector format)
+|looks good at any resolution
+
+|===
+
 == January 12
 
 . Write a home page
