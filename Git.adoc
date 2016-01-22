@@ -1,0 +1,99 @@
+= Git from the command line
+
+Open your terminal.
+
+****
+*Windows:* Windows key -> Git Bash
+
+*Mac OS X:* Finder -> Applications -> Utilities -> Terminal
+****
+
+Go to the repository for this course.
+
+----
+cd ~/COMP3670-2016
+----
+
+Look at what changed
+
+----
+git status
+----
+
+[cols="1a,3a"]
+|===
+|*To...*
+|*... type this into the Terminal:*
+
+|*Submit work*
+
+. Stage
+. Commit
+. Push
+|Decide which files to add (stage) to the next snapshot (commit)
+
+----
+# Stage everything in your repository
+git add .
+# Stage file_name_goes_here
+git add file_name_goes_here
+----
+
+Describe what you did and commit (take a snapshot)
+
+----
+git commit -m "Finished lab 1"
+# Or, to stage and commit changed tracked files:
+git commit -am "Finished lab 1"
+----
+
+Push (upload) commits to your remote repository
+
+----
+git push origin master
+----
+
+|*Receive updates*
+
+. Fetch
+. Merge
+
+|Fetch from me (download updates to your repository)
+
+----
+git fetch --all
+----
+
+****
+If your working directory isn't clean,
+stash your changes...
+
+----
+git stash
+----
+
+or commit changed tracked files:
+
+----
+git commit -am "work in progress"
+----
+
+****
+
+Merge `upstream/master` into your repository and working directory
+
+----
+git merge upstream/master
+----
+
+|*Verify submissions*
+
+Ensure the most recent commit is at `origin/master`
+|Visualize history
+
+----
+gitk --all &
+----
+
+Look for `origin/master`. If it's at the top, you pushed successfully.
+|===
