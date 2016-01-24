@@ -188,7 +188,7 @@ Next, go to the repository for this course.
 
 . Open Existing Repository.
 . Click Browse
-. Choose `COMP3670` in your home directory.
+. Choose `COMP3670-2016` in your home directory.
 . Click Open
 
 [cols="1a,2a"]
@@ -271,7 +271,7 @@ Open Eclipse.
 . General -> Existing Projects into Workspace...
 . Click Next
 . Click Browse...
-. Navigate to your home directory -> COMP3670
+. Navigate to your home directory -> COMP3670-2016
 . Click Open. You should see at least one project.
 . Click Finish
 
