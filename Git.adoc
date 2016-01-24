@@ -1,99 +1,342 @@
-= Git from the command line
+= How to use Git
 
-Open your terminal.
+In a way, Git is like Dropbox or Google Drive,
+but with far greater powers and complexity.
+Hence this guide.
+Git is available in the command line, as a standalone graphical interface, and is integrated in development tools such as Eclipse and Visual Studio.
+
+== Command line
+
+First, open your terminal.
 
 ****
-*Windows:* Windows key -> Git Bash
-
-*Mac OS X:* Finder -> Applications -> Utilities -> Terminal
+[horizontal]
+*Windows*:: Windows key -> Git Bash
+*Mac OS X*:: Finder -> Applications -> Utilities -> Terminal
 ****
 
-Go to the repository for this course.
+Then, go to the repository for this course.
 
 ----
 cd ~/COMP3670-2016
 ----
 
-Look at what changed
-
-----
-git status
-----
-
 [cols="1a,3a"]
 |===
 |*To...*
-|*... type this into the Terminal:*
+|*... follow these steps:*
 
 |*Submit work*
 
+. Work
 . Stage
 . Commit
 . Push
-|Decide which files to add (stage) to the next snapshot (commit)
+|*Work* by saving files inside the course repository `COMP3670-2016`,
+or copy files into that folder.
+
+*Stage* your work by selecting files to add to the next commit (snapshot).
+Git _tracks changes_ to the files you stage.
+
+****
+To stage all files currently in the folder...
 
 ----
-# Stage everything in your repository
 git add .
-# Stage file_name_goes_here
-git add file_name_goes_here
 ----
 
-Describe what you did and commit (take a snapshot)
+To stage `an_arbitrary_file`
+
+----
+git add an_arbitrary_file
+----
+****
+
+*Commit* to record a snapshot of the files staged earlier, and describe what you did.
 
 ----
 git commit -m "Finished lab 1"
-# Or, to stage and commit changed tracked files:
-git commit -am "Finished lab 1"
 ----
 
-Push (upload) commits to your remote repository
+[TIP]
+====
+You can stage and commit tracked files in one step:
+
+----
+git commit -am "Finished lab 1"
+----
+====
+
+*Push* to upload commits to your remote repository.
 
 ----
 git push origin master
 ----
 
-|*Receive updates*
+|*Confirm submission*
 
-. Fetch
-. Merge
-
-|Fetch from me (download updates to your repository)
-
-----
-git fetch --all
-----
-
-****
-If your working directory isn't clean,
-stash your changes...
-
-----
-git stash
-----
-
-or commit changed tracked files:
-
-----
-git commit -am "work in progress"
-----
-
-****
-
-Merge `upstream/master` into your repository and working directory
-
-----
-git merge upstream/master
-----
-
-|*Verify submissions*
-
-Ensure the most recent commit is at `origin/master`
-|Visualize history
+. Show history
+. Locate `origin/master`
+|*Show history* of commits.
 
 ----
 gitk --all &
 ----
 
-Look for `origin/master`. If it's at the top, you pushed successfully.
+*Locate `origin/master`* in the commit history to see when you last submitted work.
+If it's at the top, you pushed successfully.
+If it's missing (or not at the top), I don't have your latest changes, and you need to push.
+
+|*Receive updates*
+
+. Fetch
+. Merge
+. Check
+
+|*Fetch* to download updates from me.
+
+----
+git fetch --all
+----
+
+*Merge* `upstream/master` to combine my updates with your work.
+
+----
+git merge upstream/master
+----
+
+[TIP]
+====
+To fetch and merge in one step:
+----
+git pull upstream master
+----
+====
+
+*Check* the output for `errors` to see if you need fix anything.
+
+Git may complain that a file `would be overwritten by merge.`
+This means that you haven't _staged_ or _committed_ those file(s) yet,
+and git is preventing you from losing that work.
+Stage and commit the file(s), and try to merge again.
+
+Git may warn about a merge `CONFLICT`.
+This means that we both made different changes to the same lines in the _conflicting_ files.
+
+Examine all conflicting file(s).
+You will notice lines with `<<<<<` or `=====` or `>>>>>` that weren't there before.
+These _merge conflict markers_ show where (and how) changes created conflict.
+Although you may remove them manually, git has options to assist you.
+
+If you want to keep your version of a `conflicting_file`
+
+----
+git checkout --ours conflicting_file
+----
+
+If you want to use my version of a `conflicting_file`
+
+----
+git checkout --theirs conflicting_file
+----
+
+If you want to mix and match changes, use a merge tool (installed separately).
+
+----
+git mergetool conflicting_file
+----
+
+Finally, to fix the merge conflict, stage and commit all conflicting files (after you've fixed them).
+////
+
+Look at what changed.
+
+----
+git status
+----
+
+****
+*Changes to be committed*::
+*Changes not staged for commit*::
+*Untracked files*::
+****
+////
+
+|===
+
+== Git GUI
+
+First, open Git GUI.
+
+****
+*Windows*: Windows key -> Git GUI
+
+*Mac OS X*:
+
+Finder -> Applications -> Utilities -> Terminal
+
+----
+git gui
+----
+
+Locate the Git icon in the Dock.
+
+Right click Git -> Options -> Keep in Dock
+****
+
+Next, go to the repository for this course.
+
+. Open Existing Repository.
+. Click Browse
+. Choose `COMP3670` in your home directory.
+. Click Open
+
+[cols="1a,2a"]
+|===
+|*To...*
+|*... follow these steps:*
+
+|*Submit work*
+
+. Work
+. Stage
+. Commit
+. Push
+|*Work* within the course repository, or copy files into it.
+
+*Stage* your work by selecting files to add to the commit (snapshot).
+
+. Look for files listed under _Unstaged Changes_ (upper left panel) to stage.
+. Click the file name to examine changes in the upper right panel.
+. Click the icon to the left of the file you want to add.
+. Notice that the file is now listed under _Staged Changes_ (lower left panel).
+
+*Commit* to record a snapshot of the files you staged.
+
+. Enter a description of what you did in the _Commit Message_ (lower right panel), such as `Finished lab 1`
+. Click Commit
+
+*Push* to upload commits to your remote repository.
+
+. Click Push.
+
+|*Confirm submission*
+
+. Show history
+. Locate `origin/master`
+|*Show history* of commits.
+
+. Click Repository -> Visualize All Branch History
+
+*Locate `origin/master`* in the commit history to see when you last submitted work.
+If it's at the top, you pushed successfully.
+If it's missing (or not at the top), I don't have your latest changes, and you need to push.
+
+|*Receive updates*
+
+. Fetch
+. Merge
+. Check
+|*Fetch* to download updates from me.
+
+. Click Remote -> Fetch from -> All
+. Click OK
+
+*Merge* `upstream/master` to combine my updates with your work.
+
+. Click Merge -> Local Merge...
+. 
+|===
+
+== Eclipse
+
+Open Eclipse.
+
+*Import* the class project into Eclipse, if you haven't done so.
+
+. Click File -> Import...
+. General -> Existing Projects into Workspace...
+. Click Next
+. Click Browse...
+. Navigate to your home directory -> COMP3670
+. Click Open. You should see at least one project.
+. Click Finish
+
+[cols="1a,2a"]
+|===
+|*To...*
+|*... follow these steps:*
+
+|*Submit work*
+
+. Work
+. Stage
+. Commit
+. Push
+
+|*Work* within the class project or copy into it.
+
+. In the Package Explorer, right click on the class project
+. Team -> Commit...
+. Enter a message (such as `Lab 1 done`)
+. *Stage* by selecting files to add to the commit (snapshot).
+. Click *Commit* and *Push*
+
+|*Confirm submission*
+
+. Show history
+. Locate `origin/master`
+
+| *Show history* of commits.
+
+. In the Package Explorer, right click on the class project
+. Team -> Show in History
+
+*Locate* `origin/master` in the commit history to see when you last submitted work.
+If it's at the top, you pushed successfully.
+If it's missing (or not at the top), I don't have your latest changes, and you need to push.
+
+|*Receive updates*
+
+. Fetch
+. Merge
+. Check
+
+|*Fetch* to download updates from me.
+
+. In the Package Explorer, right click on the class project
+. Team -> Remote -> Fetch from...
+. Select `upstream`
+. Click Finish
+
+*Merge* `upstream/master` to combine my updates with your work.
+
+. In the Package Explorer, right click on the class project
+. Team -> Merge...
+. Select `upstream/master` (Under Remote Tracking)
+. Click Merge
+
+*Check* for errors to see if you need to fix anything.
+
+Eclipse may complain that a file `would be overwritten by a merge`.
+This means that you haven't _staged_ or _committed_ those file(s) yet,
+and Eclipse is preventing you from losing that work.
+Stage and commit the file(s), and try to merge again.
+
+Eclipse may warn about merge conflicts.
+This means that we both made different changes to the same lines in _conflicting_ files.
+Eclipse shows a red icon next to _conflicting_ files.
+
+Examine all conflicting file(s).
+You will notice lines with <<<<< or ===== or >>>>> that weren’t there before.
+These _merge conflict markers_ show where (and how) changes created conflict.
+Although you may remove them manually, Eclipse has a merge tool to assist you.
+
+To fix merge conflicts:
+
+. In the Package Explorer, right click on the class project
+. Team -> Merge Tool
+
+Finally, to fix the merge conflict, stage and commit all conflicting files (after you've fixed them).
+
 |===
