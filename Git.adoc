@@ -245,7 +245,20 @@ If it's missing (or not at the top), I don't have your latest changes, and you n
 *Merge* `upstream/master` to combine my updates with your work.
 
 . Click Merge -> Local Merge...
-. 
+. Click Tracking Branch
+. Select `upstream/master` in the list.
+. Click Merge
+
+*Check* for errors to see if you need to fix anything.
+
+Git GUI may complain that you are in the middle of a change.
+Indeed, you should complete the current commit before starting a merge.
+Stage and commit the file(s) and try to merge again.
+
+Git GUI may warn about merge conflicts.
+This means that we both made different changes to the same lines in _conflicting_ files.
+
+To fix the merge conflict, follow the instructions described in the command line section.
 |===
 
 == Eclipse
