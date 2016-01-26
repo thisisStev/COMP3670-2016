@@ -267,6 +267,12 @@ npm install
 node index.js
 ----
 
+== January 25: Speed dating / CSS
+
+== January 26: Lab 2
+Implement Mad Libs! as a web application using Node.js, Express.js and Handlebars.
+Maybe use a POST request?
+
 == TODO (not now, just notes to self)
 
 ----
