@@ -282,7 +282,7 @@ node index.js
 Find a partner and exchange ideas for the class project.
 
 == January 26: Lab 2
-Implement Mad Libs! as a web application using Node.js, Express.js and Handlebars.
+Implement Mad Libs! as a web application using Node.js, http://expressjs.com/en/4x/api.html[Express.js] and http://handlebarsjs.com/[Handlebars].
 To get an idea of what it may look like, see http://www.madglibs.com/showglib.php?glibid=188[an example here].
 
 *HINT:* You may want to use a POST request.
