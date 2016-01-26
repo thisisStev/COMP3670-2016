@@ -222,8 +222,6 @@ git pull upstream express-example
 git checkout master
 ----
 
-== January 20
-
 Input from forms into the backend.
 
 URL: Uniform Resource Locator (paths for the web)
@@ -255,7 +253,19 @@ URL
 * HTTP methods, requests, responses
 * URL encodings
 
-== stuff
+== January 22
+
+HTTP methods
+
+[horizontal]
+HEAD:: Get response headers only
+GET:: (_Default method_) Access resources
+POST:: Modify something on the server
+OPTIONS:: HTTP proxy or CORS requests
+PUT:: Add a resource on the server
+DELETE:: Remove a resource on the server
+
+== How to get my example app
 
 ----
 cd ~/COMP3670-2016/Code/example-app/
@@ -269,9 +279,13 @@ node index.js
 
 == January 25: Speed dating / CSS
 
+Find a partner and exchange ideas for the class project.
+
 == January 26: Lab 2
 Implement Mad Libs! as a web application using Node.js, Express.js and Handlebars.
-Maybe use a POST request?
+To get an idea of what it may look like, see http://www.madglibs.com/showglib.php?glibid=188[an example here].
+
+*HINT:* You may want to use a POST request.
 
 == TODO (not now, just notes to self)
 
