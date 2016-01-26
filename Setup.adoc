@@ -31,7 +31,7 @@ Install these Atom packages:
 * `linter-csslint`
 * `linter-htmlhint`
 * `atom-html-preview`
-* `asciidoc-preview`
+* `git-plus`
 * `color-picker`
 * `merge-conflicts`
 
