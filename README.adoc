@@ -17,34 +17,8 @@ Welcome! Let's get to know each other with an icebreaker. Answer these questions
 
 == January 8
 
-Starterupper configures git for this class.
-It is safe to run if you already use git.
-
-Copy/paste the entire command below...
-
-----
-curl https://raw.githubusercontent.com/lawrancej/COMP3670-2016/master/main.sh | bash
-----
-
-...into your terminal:
-
-[cols="1a,1a,1a,1a"]
-|===
-|*Plaform*
-|*Terminal*
-|*Copy shortcut*
-|*Paste shortcut*
-
-|*Windows*
-|Windows key -> Git Bash
-|`Ctrl-C`
-|`Shift-Insert`
-
-|*Mac*
-|Applications -> Utilities -> Terminal
-|`Command-C`
-|`Command-V`
-|===
+https://github.com/lawrancej/COMP3670-2016/blob/master/Setup.adoc[Setup all software]
+and https://github.com/lawrancej/COMP3670-2016/blob/master/Git.adoc[git].
 
 == January 11
 
@@ -281,11 +255,31 @@ node index.js
 
 Find a partner and exchange ideas for the class project.
 
+http://www.w3schools.com/cssref/css_selectors.asp[CSS selects] HTML elements to style using a `selector { style-key: value; }` syntax.
+
+https://www.w3.org/WAI/GL/css2em.htm[Use em for CSS sizes]
+
 == January 26: Lab 2
 Implement Mad Libs! as a web application using Node.js, http://expressjs.com/en/4x/api.html[Express.js] and http://handlebarsjs.com/[Handlebars].
 To get an idea of what it may look like, see http://www.madglibs.com/showglib.php?glibid=188[an example here].
 
 *HINT:* You may want to use a POST request.
+
+== January 27
+
+WARNING: NEVER store passwords as plain text in a database. Ever.
+
+* https://en.wikipedia.org/wiki/Bcrypt[Bcrypt: the right way to do passwords]
+* http://passportjs.org[Passport.js]
+
+----
+cd ~/COMP3670-2016
+npm install express-generator -g
+express --hbs database
+cd database
+npm install
+npm start
+----
 
 == TODO (not now, just notes to self)
 
