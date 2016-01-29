@@ -281,6 +281,20 @@ npm install
 npm start
 ----
 
+* http://expressjs.com/en/guide/database-integration.html[Database integration in express]
+* https://www.sqlite.org/download.html[Download SQLite-tools (Windows users)]
+
+----
+$ sqlite3 data.db
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> create table posts (title, content, author);
+sqlite> insert into posts values ("Some title", "Some content", "Joey");
+sqlite> select * from posts;
+wat|damn|Joey
+sqlite> .quit
+----
+
 == TODO (not now, just notes to self)
 
 ----
