@@ -295,6 +295,21 @@ wat|damn|Joey
 sqlite> .quit
 ----
 
+Put this somewhere in `app.js`:
+
+----
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('data.db');
+
+db.serialize(function() {
+  db.each('SELECT * FROM posts', function(err, row) {
+    console.log(row.title + ': ' + row.content + ': ' + row.author);
+  });
+});
+
+db.close();
+----
+
 == TODO (not now, just notes to self)
 
 ----
