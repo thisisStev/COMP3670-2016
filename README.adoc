@@ -6,6 +6,7 @@
 . https://github.com/lawrancej/COMP3670-2016/blob/master/Resources.adoc[Peruse relevant resources]
 . https://github.com/lawrancej/COMP3670-2016/blob/master/Git.adoc[How to use Git]
 . https://education.github.com/pack/join[Get the Github Student Developer Pack]
+. https://education.github.com/pack[Then, go here].
 
 == January 6
 
