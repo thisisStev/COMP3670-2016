@@ -343,16 +343,19 @@ Answer a few questions about your project:
 * Who is your audience?
 * What problem are you trying to solve?
 * Why wouldn't they just use something else? (It's okay to reimplement a known thing)
-* Are you planning to improve upon that already exists? If so, how?
+* Are you planning to improve upon what already exists? If so, how?
 
 Prototype (mockup) your system
 
 Low-fidelity prototype your entire system.
+Low-fidelity means that it's obvious it's just a sketch, not an implementation.
+That way, feedback is focused on features or viability, not fonts or placement.
 
 You can use:
 
 * Paper (literally)
 * http://pencil.evolus.vn/[Pencil]
+* Paint ;-)
 
 == TODO (not now, just notes to self)
 
