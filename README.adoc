@@ -8,6 +8,8 @@
 . https://education.github.com/pack/join[Get the Github Student Developer Pack]
 . https://education.github.com/pack[Then, go here].
 
+== Useful packages
+
 [horizontal]
 For...:: `npm install ___ --save`
 PostgreSQL database:: https://www.npmjs.com/package/pg[pg]
