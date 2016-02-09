@@ -38,13 +38,17 @@ January 26:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[La
 January 27:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Databases]
 January 29:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[More about databases]
 February 1:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Passport and authentication]
-February 2:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[React]
+February 2:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[React, browserify]
 February 3:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[Lab 3: Low-fidelity Prototype]
 February 5:: Class canceled
 February 8:: Class canceled
 February 9:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[Finish Lab 3: Low-fidelity Prototype]
 
 == TODO (not now, just notes to self)
+
+* peer feedback of prototypes
+* mocha testing
+
 
 https://education.github.com/pack[Github student pack]
 https://www.heroku.com/pricing[Heroku free hosting]
