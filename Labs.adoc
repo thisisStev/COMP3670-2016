@@ -1,0 +1,54 @@
+== January 8: Lab 0
+
+https://github.com/lawrancej/COMP3670-2016/blob/master/Setup.adoc[Setup all software]
+and https://github.com/lawrancej/COMP3670-2016/blob/master/Git.adoc[git].
+
+== January 12: Lab 1
+
+. Write a home page
+. Write down project ideas (look around at existing web applications)
+. Begin to think about who to work with
+
+Github can serve files in your repo under the `gh-pages` branch.
+
+----
+# create the gh-pages branch
+git checkout -b gh-pages
+# push the gh-pages branch to github
+git push origin gh-pages
+----
+
+Once there, any html in that branch will be accessible via your-user-name.github.io.
+
+For example, go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
+
+== January 26: Lab 2
+Implement Mad Libs! as a web application using Node.js, http://expressjs.com/en/4x/api.html[Express.js] and http://handlebarsjs.com/[Handlebars].
+To get an idea of what it may look like, see http://www.madglibs.com/showglib.php?glibid=188[an example here].
+
+*HINT:* You may want to use a POST request.
+
+== February 3: Lab 3: Low-fidelity prototype
+
+Answer a few questions about your project:
+
+* Who is your audience?
+* What problem are you trying to solve?
+* Why wouldn't they just use something else? (It's okay to reimplement a known thing)
+* Are you planning to improve upon what already exists? If so, how?
+
+Prototype (mockup) your system
+
+Low-fidelity prototype your entire system.
+Low-fidelity means that it's obvious it's just a sketch, not an implementation.
+That way, feedback is focused on features or viability, not fonts or placement.
+
+You can use:
+
+* Paper (literally)
+* http://pencil.evolus.vn/[Pencil]
+* Paint ;-)
+
+== February 9: Complete Lab 3
+
+We'll give feedback on each other's project prototypes shortly.
