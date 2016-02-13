@@ -243,6 +243,7 @@ npm start
 * http://expressjs.com/en/guide/database-integration.html[Database integration in express]
 * https://www.sqlite.org/download.html[Download SQLite-tools (Windows users)]
 * https://www.npmjs.com/package/sqlite3[SQLite with node]
+* http://sqlitebrowser.org/[SQLite browser]
 
 ----
 $ sqlite3 data.db
@@ -302,3 +303,11 @@ open index.html     # Mac OS X
 xdg-open index.html # Linux
 start index.html    # Windows
 ----
+
+== February 12
+
+* https://www.destroyallsoftware.com/talks/wat[WAT]
+* http://learnlayout.com/[CSS layout]
+* https://www.docker.com/what-docker[Docker]
+* https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller[Model/View/Controller]
+* https://en.wikipedia.org/wiki/Command%E2%80%93query_separation[Command/query separation]

@@ -51,4 +51,22 @@ You can use:
 
 == February 9: Complete Lab 3
 
-We'll give feedback on each other's project prototypes shortly.
+We'll give feedback on each other's project prototypes.
+
+. For the person with the prototype, without saying anything, watch what the user does.
+. Watch the "user" think aloud and *listen* for 2-3 minutes or so.
+. Take notes.
+. Explain the system, and have a conversation.
+. Take turns.
+
+== February 16
+
+AJAX APIs
+
+== February 23
+
+Milestone 1 presentation.
+
+. Make a crude front-end prototype.
+. Demo to the class from the front of the room
+. Get feedback and suggestions

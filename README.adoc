@@ -43,12 +43,13 @@ February 3:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[La
 February 5:: Class canceled
 February 8:: Class canceled
 February 9:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[Finish Lab 3: Low-fidelity Prototype]
+February 16:: AJAX APIs
+February 23:: Front-end prototype demo
 
 == TODO (not now, just notes to self)
 
 * peer feedback of prototypes
 * mocha testing
-
 
 https://education.github.com/pack[Github student pack]
 https://www.heroku.com/pricing[Heroku free hosting]

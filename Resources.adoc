@@ -1,5 +1,7 @@
 = Resources
 
+https://www.keycdn.com/blog/web-development-tools/[Web development tools]
+
 == Front-end
 
 [cols="1a,3a"]
