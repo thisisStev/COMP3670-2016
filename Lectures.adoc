@@ -366,5 +366,9 @@ $ curl https://api.github.com/users/lawrancej
 }
 ----
 
-Because the result is JSON (JavaScript Object Notation),
+Because the result is http://jsonprettyprint.com/[JSON] (JavaScript Object Notation),
 it is easy to work with in JavaScript, as shown in `ajax.html`.
+
+http://www.crockford.com/javascript/jsmin.html[JavaScript minifier].
+Minified code appears to compress better with gzip (often used in HTTP),
+hence the reason we see it.
