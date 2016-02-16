@@ -311,3 +311,60 @@ start index.html    # Windows
 * https://www.docker.com/what-docker[Docker]
 * https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller[Model/View/Controller]
 * https://en.wikipedia.org/wiki/Command%E2%80%93query_separation[Command/query separation]
+
+== February 16: AJAX and JQuery
+
+AJAX (Asynchronous JavaScript And XML) is a way to submit and receive information without leaving the page.
+This is how we have single-page applications such as Google Maps.
+
+The native API for AJAX was developed by Microsoft for Internet Explorer,
+and it looks horrible.
+
+JQuery is an old library for simplifying cross-browser development.
+Since `$` is a valid identifier in JavaScript, JQuery defines a function called `$`
+to select elements by CSS selector, to which we can add event handlers, or modify in place.
+JQuery has a simple AJAX API. Feel free to peruse the sample code in `ajax.html`.
+
+APIs (Application Programming Interfaces) for the web are typically documented with `curl`,
+a command line tool for performing web requests.
+
+Example API (for https://developer.github.com/v3/users/[GitHub]):
+
+----
+$ curl https://api.github.com/users/lawrancej
+{
+  "login": "lawrancej",
+  "id": 600809,
+  "avatar_url": "https://avatars.githubusercontent.com/u/600809?v=3",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/lawrancej",
+  "html_url": "https://github.com/lawrancej",
+  "followers_url": "https://api.github.com/users/lawrancej/followers",
+  "following_url": "https://api.github.com/users/lawrancej/following{/other_user}",
+  "gists_url": "https://api.github.com/users/lawrancej/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/lawrancej/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/lawrancej/subscriptions",
+  "organizations_url": "https://api.github.com/users/lawrancej/orgs",
+  "repos_url": "https://api.github.com/users/lawrancej/repos",
+  "events_url": "https://api.github.com/users/lawrancej/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/lawrancej/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": "Joey Lawrance",
+  "company": "Wentworth Institute of Technology",
+  "blog": "http://joeylawrance.com",
+  "location": "Boston, MA",
+  "email": "joey.lawrance@gmail.com",
+  "hireable": null,
+  "bio": null,
+  "public_repos": 72,
+  "public_gists": 4,
+  "followers": 55,
+  "following": 60,
+  "created_at": "2011-02-04T17:34:13Z",
+  "updated_at": "2016-02-11T15:20:41Z"
+}
+----
+
+Because the result is JSON (JavaScript Object Notation),
+it is easy to work with in JavaScript, as shown in `ajax.html`.
