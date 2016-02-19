@@ -372,3 +372,44 @@ it is easy to work with in JavaScript, as shown in `ajax.html`.
 http://www.crockford.com/javascript/jsmin.html[JavaScript minifier].
 Minified code appears to compress better with gzip (often used in HTTP),
 hence the reason we see it.
+
+== February 17
+
+Work on projects
+
+== February 19: Heroku
+
+. https://www.heroku.com/[Heroku: modern day shared hosting]
+. Sign up
+. Open up your inbox to validate email
+. https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction[Getting started with Node.js on Heroku]
+. https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up[Download Heroku toolbelt for your machine]
+. Once installed, log in:
++
+----
+heroku login
+----
+. https://devcenter.heroku.com/articles/getting-started-with-nodejs#prepare-the-app[Let's try an example]
++
+----
+git clone https://github.com/heroku/node-js-getting-started.git
+cd node-js-getting-started
+----
+. Create the Heroku App: This sets up a small vm on the server, and sets up a remote (`heroku`) in your git repo.
++
+----
+heroku create
+----
+. Git push to deploy to heroku
++
+----
+git push heroku master
+----
+
+== TODO
+
+https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016#nodejs
+http://howtosafelystoreapassword.com/
+https://github.com/kriskowal/q
+https://www.pentestpartners.com/blog/pwning-cctv-cameras/
+https://github.com/hezag/allorigins
