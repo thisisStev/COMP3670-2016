@@ -45,6 +45,7 @@ February 8:: Class canceled
 February 9:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[Finish Lab 3: Low-fidelity Prototype]
 February 16:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[AJAX and JQuery]
 February 19:: Heroku stuff
+February 22:: Hosting and domains
 February 23:: Front-end prototype demo
 
 == TODO (not now, just notes to self)

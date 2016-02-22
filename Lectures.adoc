@@ -406,8 +406,14 @@ heroku create
 git push heroku master
 ----
 
-== TODO
+== February 22: Hosting and domains
 
+https://github.com/lawrancej/web-example[A web example]
+
+
+
+== TODO
+https://en.wikipedia.org/wiki/Cross-site_request_forgery
 https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016#nodejs
 http://howtosafelystoreapassword.com/
 https://github.com/kriskowal/q
