@@ -408,9 +408,8 @@ git push heroku master
 
 == February 22: Hosting and domains
 
-https://github.com/lawrancej/web-example[A web example]
-
-
+* https://github.com/lawrancej/web-example[A web example]
+* https://devcenter.heroku.com/articles/custom-domains[Custom domain names]
 
 == TODO
 https://en.wikipedia.org/wiki/Cross-site_request_forgery
