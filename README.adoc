@@ -1,5 +1,7 @@
 = COMP3670
 
+https://github.com/lawrancej/web-example
+
 == Preliminaries
 
 . https://github.com/lawrancej/COMP3670-2016/blob/master/Setup.adoc[Setup all software]
