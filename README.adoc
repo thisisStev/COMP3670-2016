@@ -49,7 +49,7 @@ February 16:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.ad
 February 19:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Heroku stuff]
 February 22:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Hosting and domains]
 February 23:: Front-end prototype demo
-February 24:: Local storage and http://lawrancej.github.io/COMP3670-2016/location.html[location]
+February 24:: http://mozilla.github.io/localForage/[Local storage] and http://lawrancej.github.io/COMP3670-2016/location.html[location] and https://github.com/nodemailer/nodemailer[emailing]
 
 == TODO (not now, just notes to self)
 

@@ -70,3 +70,12 @@ Milestone 1 presentation.
 . Make a crude front-end prototype.
 . Demo to the class from the front of the room
 . Get feedback and suggestions
+
+== March 15
+
+Milestone 2 presentation.
+
+. Improve the front-end prototype.
+. Demo to the class from the front of the room
+. Get additional feedback and suggestions
+. Plan for the next milestone
