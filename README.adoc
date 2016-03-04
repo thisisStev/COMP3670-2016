@@ -22,7 +22,6 @@ HTTPS:: https://www.npmjs.com/package/letsencrypt[letsencrypt]
 Authentication:: https://www.npmjs.com/package/passport[passport]
 Asset bundling:: https://www.npmjs.com/package/broccoli[Broccoli]
 
-
 == Agenda
 
 [horizontal]
@@ -50,10 +49,16 @@ February 19:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.ad
 February 22:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Hosting and domains]
 February 23:: Front-end prototype demo
 February 24:: http://mozilla.github.io/localForage/[Local storage] and http://lawrancej.github.io/COMP3670-2016/location.html[location] and https://github.com/nodemailer/nodemailer[emailing]
+February 29:: http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_media_example1[CSS Media Queries], https://modernizr.com/docs[Detect JavaScript], Database stuff
+March 1:: More information about local testing with databases
+March 2:: https://drownattack.com/[DROWN attack], http://www.thedailywtf.com/articles/bidding-on-security[JSF**k], and http://blog.checkpoint.com/2016/02/02/ebay-platform-exposed-to-severe-vulnerability/[Ebay vulnerability]
+March 4:: http://www.jsfuck.com/[JSF**k]
+March 22:: Milestone 2
+April 5:: Milestone 3
+Final presentation:: Yay! DONE!
 
 == TODO (not now, just notes to self)
 
-* peer feedback of prototypes
 * authentication
 * hosting
 * custom tags
@@ -61,7 +66,6 @@ February 24:: http://mozilla.github.io/localForage/[Local storage] and http://la
 * cross origin resource sharing / same origin policy
 * media queries in CSS
 * promises
-* local storage
 * mocha testing
 
 https://education.github.com/pack[Github student pack]
