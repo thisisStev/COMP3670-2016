@@ -52,7 +52,7 @@ February 24:: http://mozilla.github.io/localForage/[Local storage] and http://la
 February 29:: http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_media_example1[CSS Media Queries], https://modernizr.com/docs[Detect JavaScript], Database stuff
 March 1:: More information about local testing with databases
 March 2:: https://drownattack.com/[DROWN attack], http://www.thedailywtf.com/articles/bidding-on-security[JSF**k], and http://blog.checkpoint.com/2016/02/02/ebay-platform-exposed-to-severe-vulnerability/[Ebay vulnerability]
-March 4:: http://www.jsfuck.com/[JSF**k]
+March 4:: http://www.jsfuck.com/[JSF**k], http://promises-aplus.github.io/promises-spec/[Promises], https://www.youtube.com/watch?v=b0EF0VTs9Dc[Monads and promises]
 March 22:: Milestone 2
 April 5:: Milestone 3
 Final presentation:: Yay! DONE!
