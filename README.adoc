@@ -59,12 +59,11 @@ Final presentation:: Yay! DONE!
 
 == TODO (not now, just notes to self)
 
-* authentication
+* shared database connection
 * hosting
 * custom tags
 * https
 * cross origin resource sharing / same origin policy
-* media queries in CSS
 * promises
 * mocha testing
 
