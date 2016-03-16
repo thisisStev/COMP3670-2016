@@ -53,6 +53,8 @@ February 29:: http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_media_e
 March 1:: More information about local testing with databases
 March 2:: https://drownattack.com/[DROWN attack], http://www.thedailywtf.com/articles/bidding-on-security[JSF**k], and http://blog.checkpoint.com/2016/02/02/ebay-platform-exposed-to-severe-vulnerability/[Ebay vulnerability]
 March 4:: http://www.jsfuck.com/[JSF**k], http://promises-aplus.github.io/promises-spec/[Promises], https://www.youtube.com/watch?v=b0EF0VTs9Dc[Monads and promises]
+March 14:: Happy Pi Day, Native promises
+March 16:: Debugging Node
 March 22:: Milestone 2
 April 5:: Milestone 3
 Final presentation:: Yay! DONE!
@@ -62,10 +64,12 @@ Final presentation:: Yay! DONE!
 * shared database connection
 * hosting
 * custom tags
+* cordova
 * https
 * cross origin resource sharing / same origin policy
-* promises
 * mocha testing
+* something useful with docker
+* electron, docker, react, redux, oh my
 
 https://education.github.com/pack[Github student pack]
 https://www.heroku.com/pricing[Heroku free hosting]

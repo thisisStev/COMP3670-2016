@@ -412,6 +412,48 @@ git push heroku master
 * https://devcenter.heroku.com/articles/custom-domains[Custom domain names]
 * https://help.github.com/articles/creating-project-pages-manually/[Project pages from GitHub]
 
+== March 16: Debugging Node
+
+Atom can debug Node, which is way more helpful than `console.log` or `console.error`.
+To setup Atom to debug Node, do this:
+
+. Open the Terminal. Get the path to Node.
++
+----
+which node
+----
++
+You may see something like this. Whatever it is, remember that path for Atom:
++
+----
+/usr/local/bin/node
+----
+. Open Atom.
+. `Atom` -> `Open Your Config` and add lines like these to `config.cson` (replace the path as necessary):
+
+----
+"node-debugger":
+  nodePath: "/usr/local/bin/node"
+----
+. Install `node-debugger`.
+. Restart Atom.
+
+The Node debugger is available from the command line and has a gdb-style interface.
+You could use it directly, but now that `node-debugger` is setup, let's use it to debug.
+
+. Run your application in the debugger in the Terminal.
++
+----
+# Debug code deployed to Heroku
+heroku run node debug ./bin/www
+# Debug code locally with Heroku settings
+heroku local:run node debug ./bin/www
+# debug code locally as-is
+node debug ./bin/www
+----
+. Then, in your project in Atom, go to `Packages` -> `Node Debugger` -> `Attach`.
+. You can toggle breakpoints with `F9`, step, run, examine locals and the call stack as you would in a typical IDE.
+
 == TODO
 https://en.wikipedia.org/wiki/Cross-site_request_forgery
 https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016#nodejs
