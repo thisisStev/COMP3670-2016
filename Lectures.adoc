@@ -430,7 +430,7 @@ You may see something like this. Whatever it is, remember that path for Atom:
 ----
 . Open Atom.
 . `Atom` -> `Open Your Config` and add lines like these to `config.cson` (replace the path as necessary):
-
++
 ----
 "node-debugger":
   nodePath: "/usr/local/bin/node"
