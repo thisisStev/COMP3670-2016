@@ -454,6 +454,16 @@ node debug ./bin/www
 . Then, in your project in Atom, go to `Packages` -> `Node Debugger` -> `Attach`.
 . You can toggle breakpoints with `F9`, step, run, examine locals and the call stack as you would in a typical IDE.
 
+== Paramaters in URLs
+
+Express uses the `:` to denote a variable in a route:
+
+----
+app.get('/user/:id/docs', function(req, res) {
+   var id = req.params.id;
+});
+----
+
 == TODO
 https://en.wikipedia.org/wiki/Cross-site_request_forgery
 https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016#nodejs
