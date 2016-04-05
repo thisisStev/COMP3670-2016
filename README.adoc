@@ -4,6 +4,7 @@
 
 . https://github.com/lawrancej/COMP3670-2016/blob/master/Setup.adoc[Setup all software]
 . https://github.com/lawrancej/COMP3670-2016/blob/master/Resources.adoc[Peruse relevant resources]
+. https://github.com/lawrancej/COMP3670-2016/blob/master/Git.adoc[How to use Git]
 
 == January 6
 
@@ -254,6 +255,7 @@ URL
 * HTTP methods, requests, responses
 * URL encodings
 
+<<<<<<< HEAD
 == January 22
 
 HEAD: Get headers
@@ -263,6 +265,25 @@ OPTIONS: HTTP proxy or CORS requests
 PUT: Add a resource on the server
 DELETE: Remove a resource on the server
 
+=======
+== stuff
+
+----
+cd ~/COMP3670-2016/Code/example-app/
+git fetch --all
+git stash
+git checkout upstream/express-example
+git checkout -b express-example
+npm install
+node index.js
+----
+
+== January 25: Speed dating / CSS
+
+== January 26: Lab 2
+Implement Mad Libs! as a web application using Node.js, Express.js and Handlebars.
+Maybe use a POST request?
+>>>>>>> upstream/master
 
 == TODO (not now, just notes to self)
 

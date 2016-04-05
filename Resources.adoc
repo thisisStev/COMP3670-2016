@@ -54,6 +54,7 @@
 |Packaging
 |* https://cordova.apache.org/[Cordova (phone)]
 * http://phonegap.com/[Phonegap (phone)]
+* https://github.com/jiahaog/nativefier[Nativefier]
 * http://electron.atom.io/[Electron (desktop)]
 * http://nwjs.io/[NW.js (desktop)]
 

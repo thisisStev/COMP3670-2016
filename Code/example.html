@@ -20,13 +20,24 @@ This is ignored, just like comments everywhere else
   <style>
   /* Only this kind of thing is a comment */
 #myHeader { color: red; font-family: Helvetica; }
+/* #id { style... } */
 #aParagraph { color: rgb(8, 42, 142); font-family: Helvetica; }
+/* Style applies to classes */
+.something { font-weight: bold; float: left; }
+/* Style applies to paragraphs */
+p { color: purple; text-align: center; text-decoration: underline; }
+/* if class something-else appears as a child in a something, make big */
+.something > .something-else { font-size: 90px; }
+
   </style>
 </head> <!-- this is the end -->
 <body>
+  <span class="something">This is something</span>
   <h1 id="myHeader"><i class="fa fa-warning"></i>This will look big</h1>
+  <span class="something">Another <em class="something-else">Huge</em> something</span>
   <a href="http://reddit.com"><img title="This is how XKCD adds their tooltips to their cartoons." alt="reddit" src="https://b.thumbs.redditmedia.com/TinbroxgMRwRlaeEGfgk0HTFanXvCnHk-dAm5sLP3wg.png"></a>
   <p id="aParagraph">This is not my first web page.</p>
+  <p>Another paragraph</p>
   <input type="text" id="theInput" placeholder="Type something in, dimwit!">
   <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#">Home</a></li>
