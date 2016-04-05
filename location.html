@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Location</title>
+  </head>
+  <body>
+    <div id="demo" style="float:right;"></div>
+    <input type="text" id="address" placeholder="Street Address"><br>
+    <input type="text" id="city" placeholder="City"><br>
+    <input type="text" id="state" placeholder="State"><br>
+    <input type="text" id="zip" placeholder="Postal code"><br>
+    <a href="#" onclick="getLocation()">Auto fill</a>
+    <div id="geolocation"></div>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!--
+References:
+http://www.w3schools.com/html/html5_geolocation.asp
+http://wiki.openstreetmap.org/wiki/Nominatim
+-->
+    <script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+    $.ajax({
+      url:"http://nominatim.openstreetmap.org/reverse",
+      data: {
+        format: "json",
+        lat: position.coords.latitude,
+        lon: position.coords.longitude
+      },
+      success: function( data ) {
+        if (data.address.house_number) {
+          document.getElementById('address').value = data.address.house_number + " ";
+        }
+        document.getElementById('address').value += data.address.road;
+
+        document.getElementById('city').value = (data.address.town) ? data.address.town : data.address.city;
+        document.getElementById('state').value = data.address.state;
+        document.getElementById('zip').value = data.address.postcode;
+        $( "#geolocation" ).html( JSON.stringify(data) );
+      },
+      error: function( data ) {
+        console.log("error");
+      }
+    });
+}
+</script>
+  </body>
+</html>

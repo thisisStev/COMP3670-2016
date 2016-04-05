@@ -1,0 +1,473 @@
+== January 6
+
+=== Introduce yourself
+Welcome! Let's get to know each other with an icebreaker. Answer these questions:
+
+* What is your name?
+* What is your major and why did you pick it?
+* Tell us something nobody else in the room knows about you.
+
+== January 11
+
+Let's dive into HTML, CSS, JavaScript.
+
+----
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hello world</title>
+<!-- This is a comment -->
+</head>
+<body>
+Hello, world!
+</body>
+</html>
+----
+
+Also, a friendly reminder about image file formats:
+
+[cols="1a,1a,1a"]
+|===
+|*For...*
+|*... use...*
+|*... because it...*
+
+|Photographs
+|*JPEG* (lossy raster format)
+|saves bandwidth
+
+|Screenshots
+|*PNG* (lossless raster format)
+|preserves image quality
+
+|Drawings
+|*SVG* (vector format)
+|looks good at any resolution
+
+|===
+
+== January 13: Node.js
+
+https://fortawesome.github.io/Font-Awesome/get-started/[Font awesome] is a collection of useful icons.
+
+To test that node is working correctly, do the following in the command line:
+----
+cd ~/COMP3670-2016
+git pull upstream master
+cd Code
+node node-example.js
+----
+
+Go to: http://127.0.0.1:1337/ and it should say `Hello World`
+
+== January 15: npm and Express.js
+
+`npm` is node.js' package manager (hence the name).
+You can create packages (i.e., your web app) using `npm init`.
+
+Some packages are meant for global installation, like http://browserify.org/[`browserify`] and https://mochajs.org/[`mocha`], installed earlier.
+
+Other packages only make sense as a dependency for your own package, like `express`, a web framework for node.js.
+
+Type these commands, but don't copy/paste, because `npm init` is interactive.
+
+----
+cd ~/COMP3670-2016
+mkdir -p Code/example-app
+cd Code/example-app
+npm init
+echo "node_modules" >> .gitignore
+npm install express --save
+npm install express-handlebars --save
+touch index.js
+----
+
+Go here and copy paste: http://expressjs.com/en/starter/hello-world.html[Hello world in express] into `index.js`.
+
+Then, in the command line, run it.
+
+----
+node index.js
+----
+
+To see that it works, go to http://localhost:3000/
+
+Now, let's serve static files.
+
+----
+mkdir public
+touch public/index.html
+----
+
+Fill `public/index.html` with something sensible.
+
+Add this line to `index.js` (after `var app = express();`) and save:
+
+----
+// serve up any request to /static using files from public
+app.use('/static', express.static('public'));
+----
+
+Next, stop `node` with `Ctrl-C` and re-run it:
+
+----
+node index.js
+----
+
+Then, go to http://localhost:3000/static
+
+That page is served statically.
+
+== January 19: Bootstrap, Handlebars
+
+http://getbootstrap.com/getting-started/[Bootstrap] is a popular front-end framework.
+It has a grid system (for layouts that respond to screen size),
+as well as nice default styles for things like navigation bars and alerts.
+
+Copy this HTML into your html's `head`
+
+----
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+----
+
+http://semantic-ui.com/[Semantic UI] is similar to bootstrap, but has additional styling.
+
+http://handlebarsjs.com/[Handlebars] is a template system, enabling separation of html (view) from code (model).
+Handlebars replaces placeholders in a file with data from a http://json.org/example.html[JavaScript object (JSON)]
+Placeholders come in two varieties; double-stash `{{placeholder}}` or triple-stash `{{{placeholder}}}`
+Handlebars escapes HTML into http://www.w3schools.com/html/html_entities.asp[HTML entities] for double-stash placeholders, but not for triple-stash placeholders.
+
+Let's https://github.com/ericf/express-handlebars[add handlebars to express], as https://www.youtube.com/watch?v=m5ribwPpIPw[demonstrated on youtube]
+
+If you want to see my express code, do this:
+
+----
+cd ~/COMP3670-2016
+git fetch --all
+# merge latest from master
+git merge upstream/master
+# look at my code
+git checkout upstream/express-example
+# create a local branch that tracks upstream
+git checkout -b express-example
+# Get updates to express-example
+git pull upstream express-example
+# go back to the master branch
+git checkout master
+----
+
+== January 20: HTML Forms
+
+Input from forms into the backend.
+
+URL: Uniform Resource Locator (paths for the web)
+
+Absolute URLs:
+
+----
+scheme://domain/path/to/something?key=value&anotherKey=anotherValue
+scheme://domain/path/to/something#fragment
+----
+
+Relative URLs:
+Suppose we are at `http://localhost:3000/some/place.html`
+
+----
+/another-place
+# the absolute URL is http://localhost:3000/another-place
+another-place
+# the absolute URL is http://localhost:3000/some/another-place
+../some-place-secret
+# the absolute URL is http://localhost:3000/some-place-secret
+----
+
+action is where we send form data to (that's a URL)
+method is how we send data to our "action"
+URL
+
+* HTML forms
+* HTTP methods, requests, responses
+* URL encodings
+
+== January 22: HTTP methods, form POST
+
+HTTP methods
+
+[horizontal]
+HEAD:: Get response headers only
+GET:: (_Default method_) Access resources
+POST:: Modify something on the server
+OPTIONS:: HTTP proxy or CORS requests
+PUT:: Add a resource on the server
+DELETE:: Remove a resource on the server
+
+== How to get my example app
+
+----
+cd ~/COMP3670-2016/Code/example-app/
+git fetch --all
+git stash
+git checkout upstream/express-example
+git checkout -b express-example
+npm install
+node index.js
+----
+
+== January 25: Speed dating / CSS
+
+Find a partner and exchange ideas for the class project.
+
+http://www.w3schools.com/cssref/css_selectors.asp[CSS selects] HTML elements to style using a `selector { style-key: value; }` syntax.
+
+https://www.w3.org/WAI/GL/css2em.htm[Use em for CSS sizes]
+
+== January 27: Databases
+
+----
+cd ~/COMP3670-2016
+npm install express-generator -g
+express --hbs database
+cd database
+npm install
+npm start
+----
+
+* http://expressjs.com/en/guide/database-integration.html[Database integration in express]
+* https://www.sqlite.org/download.html[Download SQLite-tools (Windows users)]
+* https://www.npmjs.com/package/sqlite3[SQLite with node]
+* http://sqlitebrowser.org/[SQLite browser]
+
+----
+$ sqlite3 data.db
+SQLite version 3.8.5 2014-08-15 22:37:57
+Enter ".help" for usage hints.
+sqlite> create table posts (title, content, author);
+sqlite> insert into posts values ("Some title", "Some content", "Joey");
+sqlite> select * from posts;
+Some title|Some content|Joey
+sqlite> .quit
+----
+
+Put this somewhere in `app.js`:
+
+----
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('data.db');
+
+db.serialize(function() {
+  db.each('SELECT * FROM posts', function(err, row) {
+    console.log(row.title + ': ' + row.content + ': ' + row.author);
+  });
+});
+
+db.close();
+----
+
+== January 29: Databases with Handlebars
+
+See reference code.
+
+== February 1: Passwords and authentication
+
+WARNING: NEVER store passwords as plain text in a database. Ever.
+
+* https://en.wikipedia.org/wiki/Bcrypt[Bcrypt: the right way to do passwords]
+* http://passportjs.org[Passport.js]
+* http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/[Blog post detailing how to use passport].
+* https://github.com/mjhea0/passport-local-express4[Example repo that goes with blog post].
+* http://stackoverflow.com/questions/23481817/node-js-passport-autentification-with-sqlite[Using passport with sqlite]
+* https://xkcd.com/327/[Don't forget about Bobby tables] (*NEVER* build SQL queries with string concatenation)
+
+== February 2: React
+
+Use browserify to get started with React, a view library for the front-end.
+React serves as the view layer for front-end applications.
+It reacts (hence the name) to changes to state and issues changes to the DOM (Document Object Model) only when necessary.
+
+----
+cd COMP3670-2016
+git fetch --all
+git merge upstream/react-example
+cd react-example
+npm install --save react react-dom babelify babel-preset-react
+browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js
+open index.html     # Mac OS X
+xdg-open index.html # Linux
+start index.html    # Windows
+----
+
+== February 12
+
+* https://www.destroyallsoftware.com/talks/wat[WAT]
+* http://learnlayout.com/[CSS layout]
+* https://www.docker.com/what-docker[Docker]
+* https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller[Model/View/Controller]
+* https://en.wikipedia.org/wiki/Command%E2%80%93query_separation[Command/query separation]
+
+== February 16: AJAX and JQuery
+
+AJAX (Asynchronous JavaScript And XML) is a way to submit and receive information without leaving the page.
+This is how we have single-page applications such as Google Maps.
+
+The native API for AJAX was developed by Microsoft for Internet Explorer,
+and it looks horrible.
+
+JQuery is an old library for simplifying cross-browser development.
+Since `$` is a valid identifier in JavaScript, JQuery defines a function called `$`
+to select elements by CSS selector, to which we can add event handlers, or modify in place.
+JQuery has a simple AJAX API. Feel free to peruse the sample code in `ajax.html`.
+
+APIs (Application Programming Interfaces) for the web are typically documented with `curl`,
+a command line tool for performing web requests.
+
+Example API (for https://developer.github.com/v3/users/[GitHub]):
+
+----
+$ curl https://api.github.com/users/lawrancej
+{
+  "login": "lawrancej",
+  "id": 600809,
+  "avatar_url": "https://avatars.githubusercontent.com/u/600809?v=3",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/lawrancej",
+  "html_url": "https://github.com/lawrancej",
+  "followers_url": "https://api.github.com/users/lawrancej/followers",
+  "following_url": "https://api.github.com/users/lawrancej/following{/other_user}",
+  "gists_url": "https://api.github.com/users/lawrancej/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/lawrancej/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/lawrancej/subscriptions",
+  "organizations_url": "https://api.github.com/users/lawrancej/orgs",
+  "repos_url": "https://api.github.com/users/lawrancej/repos",
+  "events_url": "https://api.github.com/users/lawrancej/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/lawrancej/received_events",
+  "type": "User",
+  "site_admin": false,
+  "name": "Joey Lawrance",
+  "company": "Wentworth Institute of Technology",
+  "blog": "http://joeylawrance.com",
+  "location": "Boston, MA",
+  "email": "joey.lawrance@gmail.com",
+  "hireable": null,
+  "bio": null,
+  "public_repos": 72,
+  "public_gists": 4,
+  "followers": 55,
+  "following": 60,
+  "created_at": "2011-02-04T17:34:13Z",
+  "updated_at": "2016-02-11T15:20:41Z"
+}
+----
+
+Because the result is http://jsonprettyprint.com/[JSON] (JavaScript Object Notation),
+it is easy to work with in JavaScript, as shown in `ajax.html`.
+
+http://www.crockford.com/javascript/jsmin.html[JavaScript minifier].
+Minified code appears to compress better with gzip (often used in HTTP),
+hence the reason we see it.
+
+== February 17
+
+Work on projects
+
+== February 19: Heroku
+
+. https://www.heroku.com/[Heroku: modern day shared hosting]
+. Sign up
+. Open up your inbox to validate email
+. https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction[Getting started with Node.js on Heroku]
+. https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up[Download Heroku toolbelt for your machine]
+. Once installed, log in:
++
+----
+heroku login
+----
+. https://devcenter.heroku.com/articles/getting-started-with-nodejs#prepare-the-app[Let's try an example]
++
+----
+git clone https://github.com/heroku/node-js-getting-started.git
+cd node-js-getting-started
+----
+. Create the Heroku App: This sets up a small vm on the server, and sets up a remote (`heroku`) in your git repo.
++
+----
+heroku create
+----
+. Git push to deploy to heroku
++
+----
+git push heroku master
+----
+
+== February 22: Hosting and domains
+
+* https://github.com/lawrancej/web-example[A web project example]
+* https://devcenter.heroku.com/articles/custom-domains[Custom domain names]
+* https://help.github.com/articles/creating-project-pages-manually/[Project pages from GitHub]
+
+== March 16: Debugging Node
+
+Atom can debug Node, which is way more helpful than `console.log` or `console.error`.
+To setup Atom to debug Node, do this:
+
+. Open the Terminal. Get the path to Node.
++
+----
+which node
+----
++
+You may see something like this. Whatever it is, remember that path for Atom:
++
+----
+/usr/local/bin/node
+----
+. Open Atom.
+. `Atom` -> `Open Your Config` and add lines like these to `config.cson` (replace the path as necessary):
++
+----
+"node-debugger":
+  nodePath: "/usr/local/bin/node"
+----
+. Install `node-debugger`.
+. Restart Atom.
+
+The Node debugger is available from the command line and has a gdb-style interface.
+You could use it directly, but now that `node-debugger` is setup, let's use it to debug.
+
+. Run your application in the debugger in the Terminal.
++
+----
+# Debug code deployed to Heroku
+heroku run node debug ./bin/www
+# Debug code locally with Heroku settings
+heroku local:run node debug ./bin/www
+# debug code locally as-is
+node debug ./bin/www
+----
+. Then, in your project in Atom, go to `Packages` -> `Node Debugger` -> `Attach`.
+. You can toggle breakpoints with `F9`, step, run, examine locals and the call stack as you would in a typical IDE.
+
+== Paramaters in URLs
+
+Express uses the `:` to denote a variable in a route:
+
+----
+app.get('/user/:id/docs', function(req, res) {
+   var id = req.params.id;
+});
+----
+
+== TODO
+https://en.wikipedia.org/wiki/Cross-site_request_forgery
+https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016#nodejs
+http://howtosafelystoreapassword.com/
+https://github.com/kriskowal/q
+https://www.pentestpartners.com/blog/pwning-cctv-cameras/
+https://github.com/hezag/allorigins

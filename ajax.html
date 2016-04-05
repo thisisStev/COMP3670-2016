@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AJAX example</title>
+</head>
+<body>
+  <!-- Input field -->
+  <input type="text" id="input"
+  placeholder="Enter something">
+  <input type="button" id="button" value="Push me">
+  <!-- a place to put results -->
+  <div id="result"></div>
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+  $("#button").on("click", function(event) {
+    console.log($("#input").val());
+    $.ajax({
+      url: "https://api.github.com/users/" + $("#input").val(),
+/*      data: {
+        zipcode: 97201
+      },
+      */
+      success: function( data ) {
+        console.log("success?");
+        console.log(data.name);
+        $("#result").html("Hello, " + data.name);
+//        $( "#result" ).html( JSON.stringify(data) );
+      },
+      error: function( data ) {
+        console.log("error");
+      }
+    });
+  });
+  </script>
+</body>
+</html>

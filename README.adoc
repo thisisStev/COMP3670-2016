@@ -1,261 +1,72 @@
 = COMP3670
 
+https://github.com/lawrancej/web-example
+
 == Preliminaries
 
 . https://github.com/lawrancej/COMP3670-2016/blob/master/Setup.adoc[Setup all software]
 . https://github.com/lawrancej/COMP3670-2016/blob/master/Resources.adoc[Peruse relevant resources]
 . https://github.com/lawrancej/COMP3670-2016/blob/master/Git.adoc[How to use Git]
+. https://education.github.com/pack/join[Get the Github Student Developer Pack]
+. https://education.github.com/pack[Then, go here].
+
+== Useful packages
+
+[horizontal]
+For...:: `npm install ___ --save`
+PostgreSQL database:: https://www.npmjs.com/package/pg[pg]
+SQLite database:: https://www.npmjs.com/package/sqlite3[sqlite3]
+File uploads:: https://www.npmjs.com/package/formidable[formidable]
+POST requests:: https://www.npmjs.com/package/body-parser[body-parser]
+HTTPS:: https://www.npmjs.com/package/letsencrypt[letsencrypt]
+Authentication:: https://www.npmjs.com/package/passport[passport]
+Asset bundling:: https://www.npmjs.com/package/broccoli[Broccoli]
+
+== Agenda
+
+[horizontal]
+January 6:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Introduce yourself, About this course]
+January 8:: https://github.com/lawrancej/COMP3670-2016/blob/master/Setup.adoc[Setup all software] and https://github.com/lawrancej/COMP3670-2016/blob/master/Git.adoc[git]
+January 11:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Introduction to HTML, CSS, JavaScript, and image formats]
+January 12:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[Lab 1: Home page]
+January 13:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Introduction to Node.js]
+January 15:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Introduction to npm, Express.js]
+January 19:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Introduction to Bootstrap, Handlebars]
+January 20:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Introduction to Forms (GET)]
+January 22:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Introduction to Forms (POST)]
+January 25:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Speed dating / CSS]
+January 26:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[Lab 2: Mad Libs]
+January 27:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Databases]
+January 29:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[More about databases]
+February 1:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Passport and authentication]
+February 2:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[React, browserify]
+February 3:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[Lab 3: Low-fidelity Prototype]
+February 5:: Class canceled
+February 8:: Class canceled
+February 9:: https://github.com/lawrancej/COMP3670-2016/blob/master/Labs.adoc[Finish Lab 3: Low-fidelity Prototype]
+February 16:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[AJAX and JQuery]
+February 19:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Heroku stuff]
+February 22:: https://github.com/lawrancej/COMP3670-2016/blob/master/Lectures.adoc[Hosting and domains]
+February 23:: Front-end prototype demo
+February 24:: http://mozilla.github.io/localForage/[Local storage] and http://lawrancej.github.io/COMP3670-2016/location.html[location] and https://github.com/nodemailer/nodemailer[emailing]
+February 29:: http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_media_example1[CSS Media Queries], https://modernizr.com/docs[Detect JavaScript], Database stuff
+March 1:: More information about local testing with databases
+March 2:: https://drownattack.com/[DROWN attack], http://www.thedailywtf.com/articles/bidding-on-security[JSF**k], and http://blog.checkpoint.com/2016/02/02/ebay-platform-exposed-to-severe-vulnerability/[Ebay vulnerability]
+March 4:: http://www.jsfuck.com/[JSF**k], http://promises-aplus.github.io/promises-spec/[Promises], https://www.youtube.com/watch?v=b0EF0VTs9Dc[Monads and promises]
+March 14:: Happy Pi Day, Native promises
+March 16:: Debugging Node
+March 21:: Dotenv, sessions
+March 22:: Milestone 2
+April 5:: Milestone 3
+Final presentation:: Yay! DONE!
+
+== TODO (not now, just notes to self)
+
+viewport stuff
+information retrieval
+facebook/twitter API
+secure storage of secrets on server, api access to gift cards
 
-== January 6
-
-=== Introduce yourself
-Welcome! Let's get to know each other with an icebreaker. Answer these questions:
-
-* What is your name?
-* What is your major and why did you pick it?
-* Tell us something nobody else in the room knows about you.
-
-== January 8
-
-Starterupper configures git for this class.
-It is safe to run if you already use git.
-
-Copy/paste the entire command below...
-
-----
-curl https://raw.githubusercontent.com/lawrancej/COMP3670-2016/master/main.sh | bash
-----
-
-...into your terminal:
-
-[cols="1a,1a,1a,1a"]
-|===
-|*Plaform*
-|*Terminal*
-|*Copy shortcut*
-|*Paste shortcut*
-
-|*Windows*
-|Windows key -> Git Bash
-|`Ctrl-C`
-|`Shift-Insert`
-
-|*Mac*
-|Applications -> Utilities -> Terminal
-|`Command-C`
-|`Command-V`
-|===
-
-== January 11
-
-Let's dive into HTML, CSS, JavaScript.
-
-----
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Hello world</title>
-<!-- This is a comment -->
-</head>
-<body>
-Hello, world!
-</body>
-</html>
-----
-
-Also, a friendly reminder about image file formats:
-
-[cols="1a,1a,1a"]
-|===
-|*For...*
-|*... use...*
-|*... because it...*
-
-|Photographs
-|*JPEG* (lossy raster format)
-|saves bandwidth
-
-|Screenshots
-|*PNG* (lossless raster format)
-|preserves image quality
-
-|Drawings
-|*SVG* (vector format)
-|looks good at any resolution
-
-|===
-
-== January 12
-
-. Write a home page
-. Write down project ideas (look around at existing web applications)
-. Begin to think about who to work with
-
-Github can serve files in your repo under the `gh-pages` branch.
-
-----
-# create the gh-pages branch
-git checkout -b gh-pages
-# push the gh-pages branch to github
-git push origin gh-pages
-----
-
-Once there, any html in that branch will be accessible via your-user-name.github.io.
-
-For example, go to: http://lawrancej.github.io/COMP3670-2016/Code/example.html
-
-== January 13
-
-https://fortawesome.github.io/Font-Awesome/get-started/[Font awesome] is a collection of useful icons.
-
-To test that node is working correctly, do the following in the command line:
-----
-cd ~/COMP3670-2016
-git pull upstream master
-cd Code
-node node-example.js
-----
-
-Go to: http://127.0.0.1:1337/ and it should say `Hello World`
-
-== January 15
-
-`npm` is node.js' package manager (hence the name).
-You can create packages (i.e., your web app) using `npm init`.
-
-Some packages are meant for global installation, like http://browserify.org/[`browserify`] and https://mochajs.org/[`mocha`], installed earlier.
-
-Other packages only make sense as a dependency for your own package, like `express`, a web framework for node.js.
-
-Type these commands, but don't copy/paste, because `npm init` is interactive.
-
-----
-cd ~/COMP3670-2016
-mkdir -p Code/example-app
-cd Code/example-app
-npm init
-echo "node_modules" >> .gitignore
-npm install express --save
-npm install express-handlebars --save
-touch index.js
-----
-
-Go here and copy paste: http://expressjs.com/en/starter/hello-world.html[Hello world in express] into `index.js`.
-
-Then, in the command line, run it.
-
-----
-node index.js
-----
-
-To see that it works, go to http://localhost:3000/
-
-Now, let's serve static files.
-
-----
-mkdir public
-touch public/index.html
-----
-
-Fill `public/index.html` with something sensible.
-
-Add this line to `index.js` (after `var app = express();`) and save:
-
-----
-// serve up any request to /static using files from public
-app.use('/static', express.static('public'));
-----
-
-Next, stop `node` with `Ctrl-C` and re-run it:
-
-----
-node index.js
-----
-
-Then, go to http://localhost:3000/static
-
-That page is served statically.
-
-== January 19
-
-http://getbootstrap.com/getting-started/[Bootstrap] is a popular front-end framework.
-It has a grid system (for layouts that respond to screen size),
-as well as nice default styles for things like navigation bars and alerts.
-
-Copy this HTML into your html's `head`
-
-----
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-----
-
-http://semantic-ui.com/[Semantic UI] is similar to bootstrap, but has additional styling.
-
-http://handlebarsjs.com/[Handlebars] is a template system, enabling separation of html (view) from code (model).
-Handlebars replaces placeholders in a file with data from a http://json.org/example.html[JavaScript object (JSON)]
-Placeholders come in two varieties; double-stash `{{placeholder}}` or triple-stash `{{{placeholder}}}`
-Handlebars escapes HTML into http://www.w3schools.com/html/html_entities.asp[HTML entities] for double-stash placeholders, but not for triple-stash placeholders.
-
-Let's https://github.com/ericf/express-handlebars[add handlebars to express], as https://www.youtube.com/watch?v=m5ribwPpIPw[demonstrated on youtube]
-
-If you want to see my express code, do this:
-
-----
-cd ~/COMP3670-2016
-git fetch --all
-# merge latest from master
-git merge upstream/master
-# look at my code
-git checkout upstream/express-example
-# create a local branch that tracks upstream
-git checkout -b express-example
-# Get updates to express-example
-git pull upstream express-example
-# go back to the master branch
-git checkout master
-----
-
-== January 20
-
-Input from forms into the backend.
-
-URL: Uniform Resource Locator (paths for the web)
-
-Absolute URLs:
-
-----
-scheme://domain/path/to/something?key=value&anotherKey=anotherValue
-scheme://domain/path/to/something#fragment
-----
-
-Relative URLs:
-Suppose we are at `http://localhost:3000/some/place.html`
-
-----
-/another-place
-# the absolute URL is http://localhost:3000/another-place
-another-place
-# the absolute URL is http://localhost:3000/some/another-place
-../some-place-secret
-# the absolute URL is http://localhost:3000/some-place-secret
-----
-
-action is where we send form data to (that's a URL)
-method is how we send data to our "action"
-URL
-
-* HTML forms
-* HTTP methods, requests, responses
-* URL encodings
-
-<<<<<<< HEAD
 == January 22
 
 HEAD: Get headers
@@ -265,27 +76,32 @@ OPTIONS: HTTP proxy or CORS requests
 PUT: Add a resource on the server
 DELETE: Remove a resource on the server
 
-=======
 == stuff
+http://lollyrock.com/articles/nodejs-encryption/
 
-----
-cd ~/COMP3670-2016/Code/example-app/
-git fetch --all
-git stash
-git checkout upstream/express-example
-git checkout -b express-example
-npm install
-node index.js
-----
+https://dev.twitter.com/oauth
+https://www.npmjs.com/package/twitter
+https://github.com/node-facebook/facebook-node-sdk
+https://developers.facebook.com/docs/apis-and-sdks?_fb_noscript=1
 
-== January 25: Speed dating / CSS
 
 == January 26: Lab 2
 Implement Mad Libs! as a web application using Node.js, Express.js and Handlebars.
 Maybe use a POST request?
->>>>>>> upstream/master
 
-== TODO (not now, just notes to self)
+* caching and invalidation
+* varnish
+* hosting
+* custom tags
+* cordova
+* https
+* cross origin resource sharing / same origin policy
+* mocha testing
+* something useful with docker
+* electron, docker, react, redux, oh my
+
+https://education.github.com/pack[Github student pack]
+https://www.heroku.com/pricing[Heroku free hosting]
 
 ----
 docker-machine ssh default
